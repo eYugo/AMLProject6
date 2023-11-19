@@ -55,7 +55,7 @@ where the argument following the invocation of the script is programmed to be th
 In the following, you can find a brief description of the relevant command line arguments when launching the experiments.
 
 ### Base Command Line Arguments
-| Argument &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  | Description |
+| Argument &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  | Description |
 | -------- | ----------- |
 | `--experiment` | the identifier of the experiment to run. (Eg. `baseline`) |
 | `--experiment_name` | the name of the path where to save the checkpoint and logs of the experiment. (Eg. `baseline/cartoon`) |
