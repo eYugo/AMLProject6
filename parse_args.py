@@ -12,8 +12,8 @@ def parse_arguments():
     parser.add_argument('--test_only', action='store_true', help='Whether to skip training')
     parser.add_argument('--cpu', action='store_true', help='Whether to force the usage of CPU')
 
-    parser.add_argument('--experiment', type=str, default='ERM')
-    parser.add_argument('--experiment_name', type=str, default='ERM')
+    parser.add_argument('--experiment', type=str, default='baseline')
+    parser.add_argument('--experiment_name', type=str, default='baseline')
     parser.add_argument('--experiment_args', type=str, default='{}')
     parser.add_argument('--dataset_args', type=str, default='{}')
 
