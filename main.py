@@ -73,7 +73,7 @@ def train(model, data):
                 ######################################################
 
             # Optimization step
-            scaler.scale(loss).backward()
+            scaler.scale(loss / CONFIG.grad_accum_steps).backward()
 
             if ((batch_idx + 1) % CONFIG.grad_accum_steps == 0) or (batch_idx + 1 == len(data['train'])):
                 scaler.step(optimizer)
