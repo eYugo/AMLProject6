@@ -12,7 +12,7 @@ import numpy as np
 from parse_args import parse_arguments
 
 from dataset import PACS
-from models.resnet import BaseResNet18
+from models.resnet import BaseResNet18, ASHResNet18
 
 from globals import CONFIG
 
@@ -95,16 +95,15 @@ def train(model, data):
         }
         torch.save(checkpoint, os.path.join('record', CONFIG.experiment_name, 'last.pth'))
 
-
 def main():
     
     # Load dataset
     data = PACS.load_data()
-
     # Load model
     if CONFIG.experiment in ['baseline']:
-        model = BaseResNet18()
-
+        #model = BaseResNet18()
+        model = ASHResNet18()
+         
     ######################################################
     #elif... TODO: Add here model loading for the other experiments (eg. DA and optionally DG)
 

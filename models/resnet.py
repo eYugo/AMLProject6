@@ -31,3 +31,42 @@ class BaseResNet18(nn.Module):
 #        ...
 #
 ######################################################
+
+class ActivationShapingModule(nn.Module):
+    def __init__(self):
+        super(ActivationShapingModule, self).__init__()
+    
+    def forward(self, A, M):
+        # Binarize activation map A
+        A_bin = torch.where(A > 0, torch.tensor(1.0), torch.tensor(0.0))
+        # Binarize activation map M
+        M_bin = torch.where(M > 0, torch.tensor(1.0), torch.tensor(0.0))
+        
+        shaped_output = A_bin * M_bin
+        
+        return shaped_output
+
+class ASHResNet18(nn.Module):
+    def __init__(self):
+        super(ASHResNet18, self).__init__()
+        self.resnet = resnet18(weights=ResNet18_Weights)
+        
+        self.activation_shaping_module = ActivationShapingModule()
+        self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
+    
+    def forward(self, x):
+        x = self.resnet.conv1(x)
+        x = self.resnet.bn1(x)
+        x = self.resnet.relu(x)
+        x = self.resnet.maxpool(x)
+        
+        x = self.resnet.layer1(x)
+        x = self.resnet.layer2(x)
+        x = self.resnet.layer3(x)
+        x = self.resnet.layer4(x)
+        
+        x = self.resnet.avgpool(x)
+        x = torch.flatten(x, 1)
+        x = self.resnet.fc(x)
+        
+        return x
