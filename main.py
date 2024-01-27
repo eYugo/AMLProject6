@@ -62,7 +62,7 @@ def train(model, data):
             # Compute loss
             with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
 
-                if CONFIG.experiment in ['baseline']:
+                if CONFIG.experiment in ['baseline', 'ash']:
                     x, y = batch
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     loss = F.cross_entropy(model(x), y)
@@ -101,6 +101,8 @@ def main():
     data = PACS.load_data()
     # Load model
     if CONFIG.experiment in ['baseline']:
+        model = BaseResNet18()
+    if CONFIG.experiment in ['ash']:
         model = ASHResNet18()
          
     ######################################################
@@ -125,6 +127,7 @@ if __name__ == '__main__':
 
     # Setup output directory
     CONFIG.save_dir = os.path.join('record', CONFIG.experiment_name)
+    print(CONFIG.save_dir)
     os.makedirs(CONFIG.save_dir, exist_ok=True)
 
     # Setup logging
