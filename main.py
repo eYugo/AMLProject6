@@ -101,7 +101,6 @@ def main():
     data = PACS.load_data()
     # Load model
     if CONFIG.experiment in ['baseline']:
-        #model = BaseResNet18()
         model = ASHResNet18()
          
     ######################################################
