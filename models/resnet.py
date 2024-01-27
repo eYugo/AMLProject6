@@ -44,7 +44,7 @@ class ASHResNet18(nn.Module):
         x = self.resnet.relu(x)
         x = self.resnet.maxpool(x)
         
-        x = self.activation_shaping_module(x)
+        #x = self.activation_shaping_module(x)
         x = self.resnet.layer1(x)
         x = self.resnet.layer2(x)
         x = self.resnet.layer3(x)

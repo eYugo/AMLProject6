@@ -58,7 +58,7 @@ def train(model, data):
         model.train()
         
         for batch_idx, batch in enumerate(tqdm(data['train'])):
-            
+            #target_batch = next(iter(data['test']))
             # Compute loss
             with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
 
@@ -67,10 +67,28 @@ def train(model, data):
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     loss = F.cross_entropy(model(x), y)
 
-                ######################################################
-                #elif... TODO: Add here train logic for the other experiments
+                elif CONFIG.experiment in ['adaptation']:
+                    print(batch)
+                    source_inputs = batch[0]
+                    source_labels = batch[1]
+                    target_inputs = batch[2]
+                    source_inputs, source_labels = source_inputs.to(CONFIG.device), source_labels.to(CONFIG.device)
+                    target_inputs = target_inputs.to(CONFIG.device)
 
-                ######################################################
+                    # Record activation maps Mt by forwarding xt through the network
+                    model.eval()
+                    with torch.no_grad():
+                        for name, module in model.resnet.named_children():
+                            target_inputs = module(target_inputs)
+                            if name in ['layer1', 'layer2', 'layer3', 'layer4']:
+                                Mt = target_inputs.clone()
+
+                    # Switch back to training mode
+                    model.train()
+
+                    # Forward pass with source inputs and target activation maps
+                    outputs = model(source_inputs, Mt)
+                    loss = F.cross_entropy(outputs, source_labels)
 
             # Optimization step
             scaler.scale(loss / CONFIG.grad_accum_steps).backward()
@@ -101,6 +119,8 @@ def main():
     data = PACS.load_data()
     # Load model
     if CONFIG.experiment in ['baseline']:
+        model = BaseResNet18()
+    else:
         model = ASHResNet18()
          
     ######################################################
@@ -146,3 +166,4 @@ if __name__ == '__main__':
     torch.use_deterministic_algorithms(mode=True, warn_only=True)
 
     main()
+
