@@ -70,15 +70,16 @@ def train(model, data):
                     src_x, src_y, targ_x = batch
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
 
-                    # Record activation maps Mt by forwarding Xt through the network
-                    with torch.no_grad():
-                        Mt = model.get_activation_maps(targ_x)
+                    Mt = model.get_activation_maps(targ_x)
 
-                    # Apply Mt using custom activation shaping layers when forwarding Xs
-                    Zs = model(src_x, M=Mt)
-
-                    # Compute backward pass using Cross-Entropy Loss
-                    loss = F.cross_entropy(Zs, src_y)
+                    # print(f"Mt shape: {Mt.shape}, src_x shape: {src_x.shape}, src_y shape: {src_y.shape}")
+                    # Forward pass for the source domain with activation shaping
+                    src_output = model(src_x, Mt)
+                    
+                    # Compute loss
+                    loss = F.cross_entropy(src_output, src_y)
+                        
+                    print(f"Mt shape: {Mt.shape}, src_x shape: {src_x.shape}, src_output shape: {src_output.shape}, src_y shape: {src_y.shape}")
 
                     ######################################################
                     #elif... TODO: Add here train logic for the other experiments

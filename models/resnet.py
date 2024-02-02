@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 from torchvision.models import resnet18, ResNet18_Weights
 
-# proably should not have modified BaseResNet18 but implemented a new class
 class BaseResNet18(nn.Module):
     def __init__(self):
         super(BaseResNet18, self).__init__()
@@ -10,10 +9,13 @@ class BaseResNet18(nn.Module):
         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
         self.activation_shaping = ActivationShapingModule()
 
-    def forward(self, x):
+    def forward(self, x, M=None):
         # Define the layers where activation shaping should be applied
         layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
-
+        print(f"x shape inside forward {x.shape}")
+        for i in range(len(M)):
+            print(f"M shape inside forward {i} {M[i].shape}")
+        i = 0
         for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
             x = layer(x)
             
@@ -26,8 +28,13 @@ class BaseResNet18(nn.Module):
             #   just pass one argument to the activation_shaping function (M is None by default)
             
             # Apply activation shaping after each layer in layers_to_apply_shaping
-            if layer in layers_to_apply_shaping:
-                x = self.activation_shaping(x)
+            if M is None:
+                if layer in layers_to_apply_shaping:
+                    x = self.activation_shaping(x)
+            else:
+                if layer in layers_to_apply_shaping:
+                    x = self.activation_shaping(x, M[i])
+                    i += 1
 
         x = self.resnet.avgpool(x)
         x = torch.flatten(x, 1)
@@ -36,7 +43,6 @@ class BaseResNet18(nn.Module):
         return x
 
 class ActivationShapingModule(nn.Module):
-    
     def __init__(self, probability=0.5):
         super(ActivationShapingModule, self).__init__()
         self.probability = probability
@@ -48,43 +54,26 @@ class ActivationShapingModule(nn.Module):
             # torch.bernoulli returns a tensor with the same shape as A with elements that are 0 or 1
             M = torch.bernoulli(torch.full_like(A, self.probability, device=A.device))
         M_binary = torch.where(M > 0, torch.tensor(1.0, device=A.device), torch.tensor(0.0, device=A.device))
+        
+        print(f"A shape inside asm {A.shape}")
+        print(f"M shape inside asm {M.shape}")
+        
         return A_binary * M_binary
 
 class ASHResNet18(BaseResNet18):
     def __init__(self):
         super(ASHResNet18, self).__init__()
 
-    def forward(self, x, M=None):
-        # If M is not provided, apply the default activation shaping
-        if M is None:
-            return super(ASHResNet18, self).forward(x)
-        
-        # Define the layers where activation shaping should be applied
-        layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
+    def forward(self, x, Mt=None):
+        return super().forward(x, Mt)
 
-        for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
-            x = layer(x)
-            
-            # Apply activation shaping after each layer in layers_to_apply_shaping
-            if layer in layers_to_apply_shaping:
-                x = self.activation_shaping(x, M)
-
-        x = self.resnet.avgpool(x)
-        x = torch.flatten(x, 1)
-        x = self.resnet.fc(x)
-        
-        return x
-
-######################################################
-# TODO: modify 'BaseResNet18' including the Activation Shaping Module
-#class ASHResNet18(nn.Module):
-#    def __init__(self):
-#        super(ASHResNet18, self).__init__()
-#        ...
-#    
-#    def forward(self, x):
-#        ...
-#
-######################################################
-
-# TODO: implement ASHResNet18 so that it uses the Activation Shaping Module and can satisfy task 3
+    def get_activation_maps(self, xt):
+        # Forward pass through the network to obtain activation maps for the target domain
+        self.eval()
+        with torch.no_grad():
+            Mt = []
+            for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool,
+                          self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]:
+                xt = layer(xt)
+                Mt.append(xt.clone())
+            return Mt
