@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from torchvision.models import resnet18, ResNet18_Weights
 
+# proably should not have modified BaseResNet18 but implemented a new class
 class BaseResNet18(nn.Module):
     def __init__(self):
         super(BaseResNet18, self).__init__()
@@ -49,6 +50,31 @@ class ActivationShapingModule(nn.Module):
         M_binary = torch.where(M > 0, torch.tensor(1.0, device=A.device), torch.tensor(0.0, device=A.device))
         return A_binary * M_binary
 
+class ASHResNet18(BaseResNet18):
+    def __init__(self):
+        super(ASHResNet18, self).__init__()
+
+    def forward(self, x, M=None):
+        # If M is not provided, apply the default activation shaping
+        if M is None:
+            return super(ASHResNet18, self).forward(x)
+        
+        # Define the layers where activation shaping should be applied
+        layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
+
+        for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
+            x = layer(x)
+            
+            # Apply activation shaping after each layer in layers_to_apply_shaping
+            if layer in layers_to_apply_shaping:
+                x = self.activation_shaping(x, M)
+
+        x = self.resnet.avgpool(x)
+        x = torch.flatten(x, 1)
+        x = self.resnet.fc(x)
+        
+        return x
+
 ######################################################
 # TODO: modify 'BaseResNet18' including the Activation Shaping Module
 #class ASHResNet18(nn.Module):
@@ -60,3 +86,5 @@ class ActivationShapingModule(nn.Module):
 #        ...
 #
 ######################################################
+
+# TODO: implement ASHResNet18 so that it uses the Activation Shaping Module and can satisfy task 3

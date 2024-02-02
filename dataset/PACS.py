@@ -1,7 +1,7 @@
 import torch
 import os
 import torchvision.transforms as T
-from dataset.utils import BaseDataset #, DomainAdaptationDataset, DomainGeneralizationDataset
+from dataset.utils import BaseDataset, DomainAdaptationDataset #, DomainGeneralizationDataset
 from dataset.utils import SeededDataLoader
 
 from globals import CONFIG
@@ -29,7 +29,7 @@ def load_data():
     test_transform = get_transform(size=224, mean=mean, std=std, preprocess=False)
 
     # Load examples & create Dataset
-    if CONFIG.experiment in ['baseline']:
+    if CONFIG.experiment in ['baseline', 'domain_adaptation']:
         source_examples, target_examples = [], []
 
         # Load source
@@ -48,13 +48,17 @@ def load_data():
             path, label = line[0].split('/')[1:], int(line[1])
             target_examples.append((os.path.join(CONFIG.dataset_args['root'], *path), label))
 
-        train_dataset = BaseDataset(source_examples, transform=train_transform)
-        test_dataset = BaseDataset(target_examples, transform=test_transform)
+        if CONFIG.experiment == 'baseline':
+            train_dataset = BaseDataset(source_examples, transform=train_transform)
+            test_dataset = BaseDataset(target_examples, transform=test_transform)
+        elif CONFIG.experiment == 'domain_adaptation':
+            train_dataset = DomainAdaptationDataset(source_examples, target_examples, transform=train_transform)
+            test_dataset = BaseDataset(target_examples, transform=test_transform)
+        else:
+            raise ValueError(f"Unsupported experiment: {CONFIG.experiment}")
 
     ######################################################
     #elif... TODO: Add here how to create the Dataset object for the other experiments
-
-
     ######################################################
 
     # Dataloaders

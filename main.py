@@ -12,7 +12,7 @@ import numpy as np
 from parse_args import parse_arguments
 
 from dataset import PACS
-from models.resnet import BaseResNet18
+from models.resnet import BaseResNet18, ASHResNet18
 
 from globals import CONFIG
 
@@ -66,11 +66,24 @@ def train(model, data):
                     x, y = batch
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     loss = F.cross_entropy(model(x), y)
+                elif CONFIG.experiment in ['domain_adaptation']:
+                    src_x, src_y, targ_x = batch
+                    src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
 
-                ######################################################
-                #elif... TODO: Add here train logic for the other experiments
+                    # Record activation maps Mt by forwarding Xt through the network
+                    with torch.no_grad():
+                        Mt = model.get_activation_maps(targ_x)
 
-                ######################################################
+                    # Apply Mt using custom activation shaping layers when forwarding Xs
+                    Zs = model(src_x, M=Mt)
+
+                    # Compute backward pass using Cross-Entropy Loss
+                    loss = F.cross_entropy(Zs, src_y)
+
+                    ######################################################
+                    #elif... TODO: Add here train logic for the other experiments
+
+                    ######################################################
 
             # Optimization step
             scaler.scale(loss / CONFIG.grad_accum_steps).backward()
@@ -104,6 +117,8 @@ def main():
     # Load model
     if CONFIG.experiment in ['baseline']:
         model = BaseResNet18()
+    elif CONFIG.experiment in ['domain_adaptation']:
+        model = ASHResNet18()
 
     ######################################################
     #elif... TODO: Add here model loading for the other experiments (eg. DA and optionally DG)
