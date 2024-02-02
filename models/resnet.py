@@ -66,14 +66,4 @@ class ASHResNet18(BaseResNet18):
 
     def forward(self, x, Mt=None):
         return super().forward(x, Mt)
-
-    def get_activation_maps(self, xt):
-        # Forward pass through the network to obtain activation maps for the target domain
-        self.eval()
-        with torch.no_grad():
-            Mt = []
-            for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool,
-                          self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]:
-                xt = layer(xt)
-                Mt.append(xt.clone())
-            return Mt
+    

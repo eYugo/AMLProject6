@@ -72,14 +72,11 @@ def train(model, data):
 
                     Mt = model.get_activation_maps(targ_x)
 
-                    # print(f"Mt shape: {Mt.shape}, src_x shape: {src_x.shape}, src_y shape: {src_y.shape}")
                     # Forward pass for the source domain with activation shaping
                     src_output = model(src_x, Mt)
                     
                     # Compute loss
                     loss = F.cross_entropy(src_output, src_y)
-                        
-                    print(f"Mt shape: {Mt.shape}, src_x shape: {src_x.shape}, src_output shape: {src_output.shape}, src_y shape: {src_y.shape}")
 
                     ######################################################
                     #elif... TODO: Add here train logic for the other experiments
