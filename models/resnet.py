@@ -24,12 +24,9 @@ class BaseResNet18(nn.Module):
             #   just pass one argument to the activation_shaping function (M is None by default)
             
             # Apply activation shaping after each layer in layers_to_apply_shaping
-            if M is None:
-                if layer in layers_to_apply_shaping:
-                    x = self.activation_shaping(x)
-            else:
-                if layer in layers_to_apply_shaping:
-                    x = self.activation_shaping(x, M)
+            
+            if layer in layers_to_apply_shaping:
+                x = self.activation_shaping(x, M)
 
         x = self.resnet.avgpool(x)
         x = torch.flatten(x, 1)
@@ -50,18 +47,17 @@ class ActivationShapingModule(nn.Module):
             M = torch.bernoulli(torch.full_like(A, self.probability, device=A.device))
         M_binary = torch.where(M > 0, torch.tensor(1.0, device=A.device), torch.tensor(0.0, device=A.device))
         
-        print(f"A shape inside asm {A.shape}")
-        print(f"M shape inside asm {M.shape}")
+        if A_binary.shape != M_binary.shape:
+            raise RuntimeError(f"Dimension mismatch: A_binary shape {A_binary.shape} must match M_binary shape {M_binary.shape}")
         
         return A_binary * M_binary
 
 class ASHResNet18(BaseResNet18):
     def __init__(self):
         super(ASHResNet18, self).__init__()
+        self.activation_maps = []
 
-    def forward(self, x, Mt=None):
-        if Mt is not None:
-            # Apply Mt using activation shaping layers
-            x = self.activation_shaping(x, Mt)
-        return super().forward(x)
+    def forward(self, x):
+        Mt = self.resnet(x)
+        return super().forward(x, Mt)
     
