@@ -52,12 +52,6 @@ class ActivationShapingModule(nn.Module):
         
         return A_binary * M_binary
 
-class ASHResNet18(BaseResNet18):
-    def __init__(self):
-        super(ASHResNet18, self).__init__()
-        self.activation_maps = []
-
-    def forward(self, x):
-        Mt = self.resnet(x)
-        return super().forward(x, Mt)
-    
+class ASHResNet18(nn.Module):
+    #TODO: Implement the ASHResNet18 model
+    pass

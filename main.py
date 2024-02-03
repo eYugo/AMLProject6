@@ -70,11 +70,7 @@ def train(model, data):
                     src_x, src_y, targ_x = batch
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
 
-                    # Forward pass for the source domain with activation shaping
-                    src_output = model(src_x)
-                    
-                    # Compute loss
-                    loss = F.cross_entropy(src_output, src_y)
+                    # TODO: Compute source loss
 
                     ######################################################
                     #elif... TODO: Add here train logic for the other experiments
