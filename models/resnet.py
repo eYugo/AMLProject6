@@ -12,10 +12,6 @@ class BaseResNet18(nn.Module):
     def forward(self, x, M=None):
         # Define the layers where activation shaping should be applied
         layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
-        print(f"x shape inside forward {x.shape}")
-        for i in range(len(M)):
-            print(f"M shape inside forward {i} {M[i].shape}")
-        i = 0
         for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
             x = layer(x)
             
@@ -33,8 +29,7 @@ class BaseResNet18(nn.Module):
                     x = self.activation_shaping(x)
             else:
                 if layer in layers_to_apply_shaping:
-                    x = self.activation_shaping(x, M[i])
-                    i += 1
+                    x = self.activation_shaping(x, M)
 
         x = self.resnet.avgpool(x)
         x = torch.flatten(x, 1)
@@ -65,5 +60,8 @@ class ASHResNet18(BaseResNet18):
         super(ASHResNet18, self).__init__()
 
     def forward(self, x, Mt=None):
-        return super().forward(x, Mt)
+        if Mt is not None:
+            # Apply Mt using activation shaping layers
+            x = self.activation_shaping(x, Mt)
+        return super().forward(x)
     
