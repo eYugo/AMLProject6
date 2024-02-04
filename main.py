@@ -69,15 +69,12 @@ def train(model, data):
                 elif CONFIG.experiment in ['domain_adaptation']:
                     src_x, src_y, targ_x = batch
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
-
-                    with torch.no_grad():
-                        Mt = model(targ_x)
-
-                    # Forward pass for the source domain with activation shaping
-                    src_output = model(src_x, Mt)
                     
-                    # Compute loss
-                    loss = F.cross_entropy(src_output, src_y)
+                    model(targ_x)
+                    
+                    Zs = model(src_x)
+                    
+                    loss = F.cross_entropy(Zs, src_y)
 
                     ######################################################
                     #elif... TODO: Add here train logic for the other experiments
