@@ -71,10 +71,18 @@ def train(model, data):
                     src_x, src_y, targ_x = batch
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
                     
-                    model(targ_x, True)
-                    Zs = model(src_x, False)
+                    # first
+                    model(targ_x)
+                    Zs = model(src_x)
                     
                     loss = F.cross_entropy(Zs, src_y)
+                    
+                    # # second
+                    # Zs, _ = model(src_x, targ_x)
+                    
+                    # loss = F.cross_entropy(Zs, src_y)
+                    
+
 
                     ######################################################
                     #elif... TODO: Add here train logic for the other experiments
