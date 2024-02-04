@@ -72,8 +72,9 @@ def train(model, data):
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
                     
                     model(targ_x, True)
+                    Zs = model(src_x, False)
                     
-                    loss = F.cross_entropy(model(src_x, False), src_y)
+                    loss = F.cross_entropy(Zs, src_y)
 
                     ######################################################
                     #elif... TODO: Add here train logic for the other experiments

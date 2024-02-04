@@ -58,20 +58,21 @@ class ASHResNet18(nn.Module):
         self.resnet = resnet18(weights=ResNet18_Weights)
         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
         self.activation_maps = {}
-    
+
     def forward(self, x, targ=True):
         layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
         for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
             x = layer(x)
             
-            if layer == self.resnet.maxpool:
+            if layer == self.resnet.layer1:
                 # if targ is True then register the activation map, otherwise apply the activation shaping
                 if targ:
-                    x = torch.where(x > 0.0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
-                    self.activation_maps[layer] = x
+                    # Mt = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+                    self.activation_maps[x.shape] = x.clone().detach()
                 else:
-                    x_bin = torch.where(x > 0.0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
-                    m_bin = self.activation_maps[layer]
+                    x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+                    m = self.activation_maps[x.shape]
+                    m_bin = torch.where(m > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
                     x = x_bin * m_bin
 
         x = self.resnet.avgpool(x)
