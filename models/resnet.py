@@ -35,7 +35,7 @@ class BaseResNet18(nn.Module):
         return x
 
 class ActivationShapingModule(nn.Module):
-    def __init__(self, probability=0.5):
+    def __init__(self, probability=0.0):
         super(ActivationShapingModule, self).__init__()
         self.probability = probability
         
@@ -53,5 +53,27 @@ class ActivationShapingModule(nn.Module):
         return A_binary * M_binary
 
 class ASHResNet18(nn.Module):
-    #TODO: Implement the ASHResNet18 model
-    pass
+    def __init__(self):
+        super(ASHResNet18, self).__init__()
+        self.resnet = resnet18(weights=ResNet18_Weights)
+        self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
+        self.activation_shaping = ActivationShapingModule()
+        self.activation_maps = {}
+    
+    def forward(self, x, M=None):
+        layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
+        for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
+            x = layer(x)
+            
+            if layer == self.resnet.layer1:
+                if x.shape not in self.activation_maps:
+                    x = self.activation_shaping(x, M)
+                    self.activation_maps[x.shape] = x
+                else:
+                    x = self.activation_shaping(x, self.activation_maps[x.shape])
+
+        x = self.resnet.avgpool(x)
+        x = torch.flatten(x, 1)
+        x = self.resnet.fc(x)
+        
+        return x

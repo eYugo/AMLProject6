@@ -69,8 +69,12 @@ def train(model, data):
                 elif CONFIG.experiment in ['domain_adaptation']:
                     src_x, src_y, targ_x = batch
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
-
-                    # TODO: Compute source loss
+                    
+                    model(targ_x)
+                    
+                    Zs = model(src_x)
+                    
+                    loss = F.cross_entropy(Zs, src_y)
 
                     ######################################################
                     #elif... TODO: Add here train logic for the other experiments
