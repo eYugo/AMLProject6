@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import time 
 from torchmetrics import Accuracy
 from tqdm import tqdm
 
@@ -70,11 +71,9 @@ def train(model, data):
                     src_x, src_y, targ_x = batch
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
                     
-                    model(targ_x)
+                    model(targ_x, True)
                     
-                    Zs = model(src_x)
-                    
-                    loss = F.cross_entropy(Zs, src_y)
+                    loss = F.cross_entropy(model(src_x, False), src_y)
 
                     ######################################################
                     #elif... TODO: Add here train logic for the other experiments
@@ -106,7 +105,7 @@ def train(model, data):
 
 
 def main():
-    
+    time_start = time.time()
     # Load dataset
     data = PACS.load_data()
 
@@ -127,6 +126,9 @@ def main():
         train(model, data)
     else:
         evaluate(model, data['test'])
+    
+    time_end = time.time()
+    logging.info(f'Total time: {time_end - time_start:.2f}s')
     
 
 if __name__ == '__main__':
