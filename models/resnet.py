@@ -87,6 +87,23 @@ class ASHResNet18(nn.Module):
         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
         self.activation_maps = {}
 
+    def record_activation_maps(self, trgz):
+        new_activation_maps = {}
+        layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
+
+        for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
+            trgz = layer(trgz)
+
+            trgz_bin = torch.where(trgz > 0, torch.tensor(1.0, device=trgz.device), torch.tensor(0.0, device=trgz.device))
+            new_activation_maps[id(layer)] = trgz_bin
+
+        trgz = self.resnet.avgpool(trgz)
+        trgz = torch.flatten(trgz, 1)
+        trgz = self.resnet.fc(trgz)
+        
+        self.activation_maps.update(new_activation_maps)
+
+        return trgz
 
     def forward(self, x):
         layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
@@ -95,14 +112,10 @@ class ASHResNet18(nn.Module):
             x = layer(x)
 
             if layer == self.resnet.layer1:
-                # Use the fixed activation maps obtained from target data
                 x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
-                if layer not in self.activation_maps:
-                    self.activation_maps[layer] = x_bin
-                else:
-                    m_bin = self.activation_maps[layer]
-                    if x_bin.shape == m_bin.shape:
-                        x = x_bin * m_bin
+                m_bin = self.activation_maps[id(layer)]
+                if x_bin.shape == m_bin.shape:  # ensure the shapes are the same
+                    x = x_bin * m_bin
 
         x = self.resnet.avgpool(x)
         x = torch.flatten(x, 1)

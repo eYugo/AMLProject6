@@ -8,9 +8,16 @@
             "name": "Debugger Python: File corrente con argomenti",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
+            "program": "main.py",
             "console": "integratedTerminal",
-            "args": "${command:pickArgs}"
+            "args": [
+                "--experiment=domain_adaptation",
+                "--experiment_name=domain_adaptation/cartoon/",
+                "--dataset_args={'root': 'data/PACS', 'source_domain': 'art_painting', 'target_domain': 'cartoon'}",
+                "--batch_size=128",
+                "--num_workers=5",
+                "--grad_accum_steps=1",
+            ]
         }
     ]
 }

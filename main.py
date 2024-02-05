@@ -79,8 +79,8 @@ def train(model, data):
                     
                     # second
                     
-                    model(targ_x)
-
+                    model.record_activation_maps(targ_x)
+                    
                     Zs = model(src_x)
 
                     loss = F.cross_entropy(Zs, src_y)
