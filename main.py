@@ -70,17 +70,20 @@ def train(model, data):
                 elif CONFIG.experiment in ['domain_adaptation']:
                     src_x, src_y, targ_x = batch
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
-                    
-                    # first
-                    model(targ_x)
-                    Zs = model(src_x)
-                    
-                    loss = F.cross_entropy(Zs, src_y)
-                    
-                    # second
-                    # Zs, _ = model(src_x, targ_x)
+
+                    # # first
+                    # model(targ_x)
+                    # Zs = model(src_x)
                     
                     # loss = F.cross_entropy(Zs, src_y)
+                    
+                    # second
+                    
+                    model(targ_x)
+
+                    Zs = model(src_x)
+
+                    loss = F.cross_entropy(Zs, src_y)
                     
 
 
