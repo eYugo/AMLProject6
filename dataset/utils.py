@@ -37,15 +37,14 @@ class DomainAdaptationDataset(Dataset):
     def __getitem__(self, index):
         src_path, src_label = self.source_examples[index]
         
-        # Randomly sample target example
-
-        targ_path = None
-        for t, l in self.target_examples:
-            if l == src_label:
-                targ_path = t
-                break
-        if targ_path is None:
-            targ_path, _ = random.choice(self.target_examples)
+        # targ_path = None
+        # for t, l in self.target_examples:
+        #     if l == src_label:
+        #         targ_path = t
+        #         break
+        # if targ_path is None:
+        #     print(f"Could not find target example for label {src_label}")
+        targ_path, _ = random.choice(self.target_examples)
         src_img = Image.open(src_path).convert("RGB")
         targ_img = Image.open(targ_path).convert("RGB")
 

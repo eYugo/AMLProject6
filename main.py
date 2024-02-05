@@ -77,7 +77,7 @@ def train(model, data):
                     
                     loss = F.cross_entropy(Zs, src_y)
                     
-                    # # second
+                    # second
                     # Zs, _ = model(src_x, targ_x)
                     
                     # loss = F.cross_entropy(Zs, src_y)

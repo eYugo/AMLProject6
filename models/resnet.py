@@ -71,11 +71,12 @@ class ASHResNet18(nn.Module):
                 x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
                 m_bin = self.activation_maps[layer]
                 x = x_bin * m_bin
+                print(len(self.activation_maps))
 
         x = self.resnet.avgpool(x)
         x = torch.flatten(x, 1)
         x = self.resnet.fc(x)
-        
+
         return x
 
 # class ASHResNet18(nn.Module):
