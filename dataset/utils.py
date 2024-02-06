@@ -43,14 +43,14 @@ class DomainAdaptationDataset(Dataset):
         #         targ_path = t
         #         break
         # if targ_path is None:
-        #     print(f"Could not find target example for label {src_label}")
         targ_path, _ = random.choice(self.target_examples)
         src_img = Image.open(src_path).convert("RGB")
         targ_img = Image.open(targ_path).convert("RGB")
 
         src_img = self.T(src_img).to(CONFIG.dtype)
         targ_img = self.T(targ_img).to(CONFIG.dtype)
-
+        
+        src_label = torch.tensor(src_label).long()
         return src_img, src_label, targ_img
 
 ######################################################
