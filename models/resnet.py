@@ -67,7 +67,7 @@ class ActivationShapingModule(nn.Module):
 #             if layer == self.resnet.layer1:
                 
 #                 Mt = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
-#                 #self.activation_maps[layer] = Mt.clone().detach()
+#                 self.activation_maps[layer] = Mt.clone().detach()
                 
 #                 # if targ is True then register the activation map, otherwise apply the activation shaping
 #                 x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
@@ -95,26 +95,22 @@ class ASHResNet18(nn.Module):
             trgz = layer(trgz)
 
             trgz_bin = torch.where(trgz > 0, torch.tensor(1.0, device=trgz.device), torch.tensor(0.0, device=trgz.device))
-            new_activation_maps[id(layer)] = trgz_bin
-
-        trgz = self.resnet.avgpool(trgz)
-        trgz = torch.flatten(trgz, 1)
-        trgz = self.resnet.fc(trgz)
+            new_activation_maps[layer] = trgz_bin
         
         self.activation_maps.update(new_activation_maps)
 
-        return trgz
+        return
 
-    def forward(self, x):
+    def forward(self, x, stage="test"):
         layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
 
         for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
             x = layer(x)
 
-            if layer == self.resnet.layer1:
+            if layer == self.resnet.layer1 and stage == "train":
                 x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
-                m_bin = self.activation_maps[id(layer)]
-                if x_bin.shape == m_bin.shape:  # ensure the shapes are the same
+                m_bin = self.activation_maps[layer]
+                if x_bin.shape == m_bin.shape:
                     x = x_bin * m_bin
 
         x = self.resnet.avgpool(x)
