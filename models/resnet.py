@@ -113,8 +113,8 @@ class ASHResNet18(nn.Module):
         
         for layer_name, layer in self.record_layers.items():
             x = layer(x)
-            mt = self.activation_maps[layer_name]
-            if test == False and layer_name == 'conv1':
+            if test == False and layer_name == 'maxpool':
+                mt = self.activation_maps[layer_name]
                 mt_bin = torch.where(mt > 0, torch.tensor(1.0, device=mt.device), torch.tensor(0.0, device=mt.device))
                 x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
                 x = x_bin * mt_bin
