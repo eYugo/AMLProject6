@@ -87,34 +87,42 @@ class ASHResNet18(nn.Module):
         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
         self.activation_maps = {}
 
-    def record_activation_maps(self, trgz):
-        new_activation_maps = {}
-        layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
+        self.record_layers = {
+            'conv1': self.resnet.conv1,
+            'bn1': self.resnet.bn1,
+            'relu': self.resnet.relu,
+            'maxpool': self.resnet.maxpool,
+            'layer1': self.resnet.layer1,
+            'layer2': self.resnet.layer2,
+            'layer3': self.resnet.layer3,
+            'layer4': self.resnet.layer4
+        }
 
-        for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
-            trgz = layer(trgz)
+        self.activation_maps = {layer_name: None for layer_name in self.record_layers}
 
-            trgz_bin = torch.where(trgz > 0, torch.tensor(1.0, device=trgz.device), torch.tensor(0.0, device=trgz.device))
-            new_activation_maps[layer] = trgz_bin
-        
-        self.activation_maps.update(new_activation_maps)
-
-        return
-
-    def forward(self, x, stage="test"):
-        layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
-
-        for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
+    def record_activation_maps(self, x):
+        # Forward pass through each layer and store activations
+        for layer_name, layer in self.record_layers.items():
             x = layer(x)
+            self.activation_maps[layer_name] = x.clone().detach()
 
-            if layer == self.resnet.layer1 and stage == "train":
+    def forward(self, x, target = None, test=True):
+        
+        if target is not None:
+            self.record_activation_maps(target)
+        
+        for layer_name, layer in self.record_layers.items():
+            x = layer(x)
+            mt = self.activation_maps[layer_name]
+            if test == False and layer_name == 'conv1':
+                mt_bin = torch.where(mt > 0, torch.tensor(1.0, device=mt.device), torch.tensor(0.0, device=mt.device))
                 x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
-                m_bin = self.activation_maps[layer]
-                if x_bin.shape == m_bin.shape:
-                    x = x_bin * m_bin
+                x = x_bin * mt_bin
 
+            
         x = self.resnet.avgpool(x)
         x = torch.flatten(x, 1)
         x = self.resnet.fc(x)
-
+        
         return x
+    

@@ -43,7 +43,7 @@ class DomainAdaptationDataset(Dataset):
         #         targ_path = t
         #         break
         # if targ_path is None:
-        targ_path, _ = random.choice(self.target_examples)
+        targ_path, _ = self.target_examples[random.randint(0, len(self.target_examples) - 1)]
         src_img = Image.open(src_path).convert("RGB")
         targ_img = Image.open(targ_path).convert("RGB")
 
