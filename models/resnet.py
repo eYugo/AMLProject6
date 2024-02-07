@@ -99,7 +99,7 @@ class ASHResNet18(nn.Module):
         }
 
         self.activation_maps = {layer_name: None for layer_name in self.record_layers}
-
+        
     def record_activation_maps(self, x):
         # Forward pass through each layer and store activations
         for layer_name, layer in self.record_layers.items():
@@ -113,7 +113,8 @@ class ASHResNet18(nn.Module):
         
         for layer_name, layer in self.record_layers.items():
             x = layer(x)
-            if test == False and layer_name == 'maxpool':
+            if test == False and (layer_name == 'layer4'):
+                print('Applying activation shaping')
                 mt = self.activation_maps[layer_name]
                 mt_bin = torch.where(mt > 0, torch.tensor(1.0, device=mt.device), torch.tensor(0.0, device=mt.device))
                 x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
