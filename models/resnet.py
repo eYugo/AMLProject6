@@ -7,72 +7,174 @@ class BaseResNet18(nn.Module):
         super(BaseResNet18, self).__init__()
         self.resnet = resnet18(weights=ResNet18_Weights)
         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
+        self.activation_shaping = ActivationShapingModule()
 
-    def forward(self, x):
-        return self.resnet(x)
+    def forward(self, x, M=None):
+        # Define the layers where activation shaping should be applied
+        layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
+        for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
+            x = layer(x)
+            
+            # task 1: apply activation shaping 
+            #   to use uncomment the "if statement"
+            #   default applies activation shaping after each layer in layers_to_apply_shaping, you can change this by changing the if statement
+            
+            # task 2: apply random activation shaping with a probability of 0.5
+            #   to use uncomment the "if statement"
+            #   just pass one argument to the activation_shaping function (M is None by default)
+            
+            # Apply activation shaping after each layer in layers_to_apply_shaping
+            
+            if layer in layers_to_apply_shaping:
+                x = self.activation_shaping(x, M)
+
+        x = self.resnet.avgpool(x)
+        x = torch.flatten(x, 1)
+        x = self.resnet.fc(x)
+        
+        return x
 
 class ActivationShapingModule(nn.Module):
-    def __init__(self):
+    def __init__(self, probability=0.0):
         super(ActivationShapingModule, self).__init__()
+        self.probability = probability
+        
+    
+    def forward(self, A, M=None):
+        A_binary = torch.where(A > 0, torch.tensor(1.0, device=A.device), torch.tensor(0.0, device=A.device))
+        if M is None:
+            # torch.bernoulli returns a tensor with the same shape as A with elements that are 0 or 1
+            M = torch.bernoulli(torch.full_like(A, self.probability, device=A.device))
+        M_binary = torch.where(M > 0, torch.tensor(1.0, device=A.device), torch.tensor(0.0, device=A.device))
+        
+        if A_binary.shape != M_binary.shape:
+            raise RuntimeError(f"Dimension mismatch: A_binary shape {A_binary.shape} must match M_binary shape {M_binary.shape}")
+        
+        return A_binary * M_binary
 
-    def forward(self, A):
-        # Generate random activation map M with the same shape as A with values in [0, 1]
-        M = (torch.rand(A.shape)).to(A.device)
+# class ASHResNet18(nn.Module):
+#     def __init__(self):
+#         super(ASHResNet18, self).__init__()
+#         self.resnet = resnet18(weights=ResNet18_Weights)
+#         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
+#         self.activation_maps = {}
 
-        # Binarize activation map A
-        A_bin = torch.where(A > 0, torch.tensor(1.0), torch.tensor(0.0))
-        # Binarize activation map M
-        M_bin = torch.where(M >= 0, torch.tensor(1.0), torch.tensor(0.0))
+#     def forward(self, x):
+#         layers_to_apply_shaping = [self.resnet.layer1, self.resnet.layer2, self.resnet.layer3, self.resnet.layer4]
+#         for layer in [self.resnet.conv1, self.resnet.bn1, self.resnet.relu, self.resnet.maxpool] + layers_to_apply_shaping:
+#             x = layer(x)
 
-        # Element-wise product of A and M
-        shaped_output = A_bin * M_bin
+#             if layer == self.resnet.layer1:
+                
+#                 Mt = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+#                 self.activation_maps[layer] = Mt.clone().detach()
+                
+#                 # if targ is True then register the activation map, otherwise apply the activation shaping
+#                 x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+#                 #m_bin = self.activation_maps[layer]
+#                 x = x_bin * Mt
 
-        return shaped_output
+#         x = self.resnet.avgpool(x)
+#         x = torch.flatten(x, 1)
+#         x = self.resnet.fc(x)
+
+#         return x
 
 class ASHResNet18(nn.Module):
     def __init__(self):
         super(ASHResNet18, self).__init__()
         self.resnet = resnet18(weights=ResNet18_Weights)
-
-        # Initialize ActivationShapingModule
-        self.activation_shaping_module = ActivationShapingModule()
         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
+        self.activation_maps = {}
 
-    def forward(self, x):
-        x = self.resnet.conv1(x)
-        x = self.resnet.bn1(x)
-        x = self.resnet.relu(x)
-        x = self.resnet.maxpool(x)
+        self.record_layers = {
+            'conv1': self.resnet.conv1,
+            'bn1': self.resnet.bn1,
+            'relu': self.resnet.relu,
+            'maxpool': self.resnet.maxpool,
+            'layer1': self.resnet.layer1,
+            'layer2': self.resnet.layer2,
+            'layer3': self.resnet.layer3,
+            'layer4': self.resnet.layer4
+        }
         
-        #x = self.activation_shaping_module(x)
-        x = self.resnet.layer1(x)
-        x = self.resnet.layer2(x)
-        x = self.resnet.layer3(x)
-        x = self.resnet.layer4(x)
+    def record_activation_maps(self, x):
+        activation_maps = {layer_name: None for layer_name in self.record_layers}
         
+        for layer_name, layer in self.record_layers.items():
+            x = layer(x)
+            x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+            activation_maps[layer_name] = x_bin.clone().detach()
+
+        return activation_maps
+
+    def forward(self, x, activation_maps=None, test=True):
+        for layer_name, layer in self.record_layers.items():
+            x = layer(x)
+            if test == False and (layer_name == 'layer4'):
+                mt_bin = activation_maps[layer_name]
+                x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+                x = x_bin * mt_bin
+            
         x = self.resnet.avgpool(x)
         x = torch.flatten(x, 1)
         x = self.resnet.fc(x)
-
+        
         return x
+    
+    #Extension 2 - variation 1
+    def forward_1(self, x, target = None, test=True):
+        if target is not None:
+            self.record_activation_maps(target)
+        
+        for layer_name, layer in self.record_layers.items():
+            x = layer(x)
+            if test == False and layer_name == 'maxpool':
+                mt = self.activation_maps[layer_name]
+                #mt_bin = torch.where(mt > 0, torch.tensor(1.0, device=mt.device), torch.tensor(0.0, device=mt.device))
+                x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+                #x = x_bin * mt_bin
+                x = x_bin * mt
 
-######################################################
-# TODO: either define the Activation Shaping Module as a nn.Module
-#class ActivationShapingModule(nn.Module):
-#...
-#
-# OR as a function that shall be hooked via 'register_forward_hook'
-#def activation_shaping_hook(module, input, output):
-#...
-#
-######################################################
-# TODO: modify 'BaseResNet18' including the Activation Shaping Module
-#class ASHResNet18(nn.Module):
-#    def __init__(self):
-#        super(ASHResNet18, self).__init__()
-#        ...
-#    
-#    def forward(self, x):
-#        ...
-#
-######################################################
+            
+        x = self.resnet.avgpool(x)
+        x = torch.flatten(x, 1)
+        x = self.resnet.fc(x)
+        
+        return x
+    
+    #Finding top k elements in the tensor
+    def top_vals(self, x, k):
+        top_values = torch.ones(k, device=x.device)*-9999
+        for rgb in x:
+            for matrix in rgb:
+                for row in matrix:
+                    values, _ = torch.topk(row, k)
+                    top_values = torch.where(values > top_values, values, top_values)
+        top_values, _ = top_values.sort()
+        return top_values
+    
+    #Extension 2 - variation 2
+    def forward(self, x, target = None, test=True, k=5):
+
+        #K has to be tuned
+
+        if test == False:
+            top_values = self.top_vals(x, k)
+
+        if target is not None:
+            self.record_activation_maps(target)
+        
+        for layer_name, layer in self.record_layers.items():
+            x = layer(x)
+            if test == False and layer_name == 'maxpool':
+                mt = self.activation_maps[layer_name]
+                mt_bin = torch.where(mt >= top_values[-1], torch.tensor(1.0, device=mt.device), torch.tensor(0.0, device=mt.device))
+                x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+                x = x_bin * mt_bin
+            
+        x = self.resnet.avgpool(x)
+        x = torch.flatten(x, 1)
+        x = self.resnet.fc(x)
+        
+        return x

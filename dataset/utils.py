@@ -19,12 +19,34 @@ class BaseDataset(Dataset):
         return len(self.examples)
 
     def __getitem__(self, index):
-        x, y = self.examples[index]
-        x = Image.open(x).convert("RGB")
-        x = self.T(x).to(CONFIG.dtype)
-        y = torch.tensor(y).long()
-        return x, y
+        path, label = self.examples[index]
+        img = Image.open(path).convert("RGB")
+        img = self.T(img).to(CONFIG.dtype)
+        label = torch.tensor(label).long()
+        return img, label
 
+class DomainAdaptationDataset(Dataset):
+    def __init__(self, source_examples, target_examples, train_transform, test_transform):
+        self.source_examples = source_examples
+        self.target_examples = target_examples
+        self.train_transform = train_transform
+        self.test_transform = test_transform
+
+    def __len__(self):
+        return len(self.source_examples)
+
+    def __getitem__(self, index):
+        src_path, src_label = self.source_examples[index]
+        
+        targ_path, _ = random.choice(self.target_examples)
+        src_img = Image.open(src_path).convert("RGB")
+        targ_img = Image.open(targ_path).convert("RGB")
+
+        src_img = self.train_transform(src_img).to(CONFIG.dtype)
+        targ_img = self.test_transform(targ_img).to(CONFIG.dtype)
+        
+        src_label = torch.tensor(src_label).long()
+        return src_img, src_label, targ_img
 
 ######################################################
 # TODO: modify 'BaseDataset' for the Domain Adaptation setting.

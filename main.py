@@ -1,6 +1,8 @@
+import copy
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import time 
 from torchmetrics import Accuracy
 from tqdm import tqdm
 
@@ -66,29 +68,14 @@ def train(model, data):
                     x, y = batch
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     loss = F.cross_entropy(model(x), y)
-
-                elif CONFIG.experiment in ['adaptation']:
-                    print(batch)
-                    source_inputs = batch[0]
-                    source_labels = batch[1]
-                    target_inputs = batch[2]
-                    source_inputs, source_labels = source_inputs.to(CONFIG.device), source_labels.to(CONFIG.device)
-                    target_inputs = target_inputs.to(CONFIG.device)
-
-                    # Record activation maps Mt by forwarding xt through the network
-                    model.eval()
-                    with torch.no_grad():
-                        for name, module in model.resnet.named_children():
-                            target_inputs = module(target_inputs)
-                            if name in ['layer1', 'layer2', 'layer3', 'layer4']:
-                                Mt = target_inputs.clone()
-
-                    # Switch back to training mode
-                    model.train()
-
-                    # Forward pass with source inputs and target activation maps
-                    outputs = model(source_inputs, Mt)
-                    loss = F.cross_entropy(outputs, source_labels)
+                elif CONFIG.experiment in ['domain_adaptation']:
+                    src_x, src_y, targ_x = batch
+                    src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
+                    
+                    model_copy = copy.deepcopy(model)
+                    activation_maps = model_copy.record_activation_maps(targ_x)
+                    Zs = model(src_x, activation_maps, test=False)
+                    loss = F.cross_entropy(Zs, src_y)
 
             # Optimization step
             scaler.scale(loss / CONFIG.grad_accum_steps).backward()
@@ -114,15 +101,15 @@ def train(model, data):
         torch.save(checkpoint, os.path.join('record', CONFIG.experiment_name, 'last.pth'))
 
 def main():
-    
+    time_start = time.time()
     # Load dataset
     data = PACS.load_data()
     # Load model
     if CONFIG.experiment in ['baseline']:
         model = BaseResNet18()
-    else:
+    elif CONFIG.experiment in ['domain_adaptation']:
         model = ASHResNet18()
-         
+
     ######################################################
     #elif... TODO: Add here model loading for the other experiments (eg. DA and optionally DG)
 
@@ -134,6 +121,9 @@ def main():
         train(model, data)
     else:
         evaluate(model, data['test'])
+    
+    time_end = time.time()
+    logging.info(f'Total time: {time_end - time_start:.2f}s')
     
 
 if __name__ == '__main__':
