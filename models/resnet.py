@@ -106,13 +106,14 @@ class ASHResNet18(nn.Module):
             x = layer(x)
             self.activation_maps[layer_name] = x.clone().detach()
 
-    def forward(self, x, target = None, test=True):
+    def forward_original(self, x, target = None, test=True):
         
-        if target is not None:
-            self.record_activation_maps(target)
+        # if target is not None:
+        #     self.record_activation_maps(target)
         
         for layer_name, layer in self.record_layers.items():
             x = layer(x)
+            self.activation_maps[layer_name] = x.clone().detach()
             if test == False and layer_name == 'maxpool':
                 mt = self.activation_maps[layer_name]
                 mt_bin = torch.where(mt > 0, torch.tensor(1.0, device=mt.device), torch.tensor(0.0, device=mt.device))
@@ -126,3 +127,59 @@ class ASHResNet18(nn.Module):
         
         return x
     
+    #Extension 2 - variation 1
+    def forward_1(self, x, target = None, test=True):
+        if target is not None:
+            self.record_activation_maps(target)
+        
+        for layer_name, layer in self.record_layers.items():
+            x = layer(x)
+            if test == False and layer_name == 'maxpool':
+                mt = self.activation_maps[layer_name]
+                #mt_bin = torch.where(mt > 0, torch.tensor(1.0, device=mt.device), torch.tensor(0.0, device=mt.device))
+                x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+                #x = x_bin * mt_bin
+                x = x_bin * mt
+
+            
+        x = self.resnet.avgpool(x)
+        x = torch.flatten(x, 1)
+        x = self.resnet.fc(x)
+        
+        return x
+    
+    #Finding top k elements in the tensor
+    def top_vals(self, x, k):
+        top_values = torch.ones(k, device=x.device)*-9999
+        for rgb in x:
+            for matrix in rgb:
+                for row in matrix:
+                    values, _ = torch.topk(row, k)
+                    top_values = torch.where(values > top_values, values, top_values)
+        top_values, _ = top_values.sort()
+        return top_values
+    
+    #Extension 2 - variation 2
+    def forward(self, x, target = None, test=True, k=5):
+
+        #K has to be tuned
+
+        if test == False:
+            top_values = self.top_vals(x, k)
+
+        if target is not None:
+            self.record_activation_maps(target)
+        
+        for layer_name, layer in self.record_layers.items():
+            x = layer(x)
+            if test == False and layer_name == 'maxpool':
+                mt = self.activation_maps[layer_name]
+                mt_bin = torch.where(mt >= top_values[-1], torch.tensor(1.0, device=mt.device), torch.tensor(0.0, device=mt.device))
+                x_bin = torch.where(x > 0, torch.tensor(1.0, device=x.device), torch.tensor(0.0, device=x.device))
+                x = x_bin * mt_bin
+            
+        x = self.resnet.avgpool(x)
+        x = torch.flatten(x, 1)
+        x = self.resnet.fc(x)
+        
+        return x
