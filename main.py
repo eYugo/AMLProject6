@@ -60,11 +60,11 @@ def train(model, data):
         model.train()
         
         for batch_idx, batch in enumerate(tqdm(data['train'])):
-            
+            #target_batch = next(iter(data['test']))
             # Compute loss
             with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
 
-                if CONFIG.experiment in ['baseline']:
+                if CONFIG.experiment in ['baseline', 'ash']:
                     x, y = batch
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     loss = F.cross_entropy(model(x), y)
@@ -100,12 +100,10 @@ def train(model, data):
         }
         torch.save(checkpoint, os.path.join('record', CONFIG.experiment_name, 'last.pth'))
 
-
 def main():
     time_start = time.time()
     # Load dataset
     data = PACS.load_data()
-
     # Load model
     if CONFIG.experiment in ['baseline']:
         model = BaseResNet18()
@@ -137,6 +135,7 @@ if __name__ == '__main__':
 
     # Setup output directory
     CONFIG.save_dir = os.path.join('record', CONFIG.experiment_name)
+    print(CONFIG.save_dir)
     os.makedirs(CONFIG.save_dir, exist_ok=True)
 
     # Setup logging
@@ -158,3 +157,4 @@ if __name__ == '__main__':
     torch.use_deterministic_algorithms(mode=True, warn_only=True)
 
     main()
+
