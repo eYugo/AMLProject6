@@ -26,10 +26,11 @@ class BaseDataset(Dataset):
         return img, label
 
 class DomainAdaptationDataset(Dataset):
-    def __init__(self, source_examples, target_examples, transform):
+    def __init__(self, source_examples, target_examples, train_transform, test_transform):
         self.source_examples = source_examples
         self.target_examples = target_examples
-        self.T = transform
+        self.train_transform = train_transform
+        self.test_transform = test_transform
 
     def __len__(self):
         return len(self.source_examples)
@@ -37,18 +38,12 @@ class DomainAdaptationDataset(Dataset):
     def __getitem__(self, index):
         src_path, src_label = self.source_examples[index]
         
-        # targ_path = None
-        # for t, l in self.target_examples:
-        #     if l == src_label:
-        #         targ_path = t
-        #         break
-        # if targ_path is None:
-        targ_path, _ = self.target_examples[random.randint(0, len(self.target_examples) - 1)]
+        targ_path, _ = random.choice(self.target_examples)
         src_img = Image.open(src_path).convert("RGB")
         targ_img = Image.open(targ_path).convert("RGB")
 
-        src_img = self.T(src_img).to(CONFIG.dtype)
-        targ_img = self.T(targ_img).to(CONFIG.dtype)
+        src_img = self.train_transform(src_img).to(CONFIG.dtype)
+        targ_img = self.test_transform(targ_img).to(CONFIG.dtype)
         
         src_label = torch.tensor(src_label).long()
         return src_img, src_label, targ_img

@@ -52,7 +52,7 @@ def load_data():
             train_dataset = BaseDataset(source_examples, transform=train_transform)
             test_dataset = BaseDataset(target_examples, transform=test_transform)
         elif CONFIG.experiment == 'domain_adaptation':
-            train_dataset = DomainAdaptationDataset(source_examples, target_examples, transform=train_transform)
+            train_dataset = DomainAdaptationDataset(source_examples, target_examples, train_transform, test_transform)
             test_dataset = BaseDataset(target_examples, transform=test_transform)
         else:
             raise ValueError(f"Unsupported experiment: {CONFIG.experiment}")

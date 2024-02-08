@@ -1,3 +1,4 @@
+import copy
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -71,8 +72,9 @@ def train(model, data):
                     src_x, src_y, targ_x = batch
                     src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
                     
-                    # model.record_activation_maps(targ_x)
-                    Zs = model(src_x, targ_x, test=False)
+                    model_copy = copy.deepcopy(model)
+                    activation_maps = model_copy.record_activation_maps(targ_x)
+                    Zs = model(src_x, activation_maps, test=False)
                     loss = F.cross_entropy(Zs, src_y)
 
             # Optimization step
