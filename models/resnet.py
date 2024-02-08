@@ -99,7 +99,7 @@ class ASHResNet18(nn.Module):
         }
 
         self.activation_maps = {layer_name: None for layer_name in self.record_layers}
-
+        
     def record_activation_maps(self, x):
         # Forward pass through each layer and store activations
         for layer_name, layer in self.record_layers.items():
