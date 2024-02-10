@@ -1,0 +1,3360 @@
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook
+Attaching forward hook
+Recording activation
+name: BatchNorm2d
+Detaching forward hook
+Attaching forward hook
+Forward hook inside CASLayer
+Detaching forward hook

@@ -77,7 +77,7 @@ def train(model, data):
                     x, y, xt = batch
                     x, y, xt = x.to(CONFIG.device), y.to(CONFIG.device), xt.to(CONFIG.device)
                     
-                    _ = model(x, test=False, target=True)
+                    _ = model(xt, test=False, target=True)
                     
                     zt = model(x, test=False)
                     
