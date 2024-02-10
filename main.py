@@ -12,7 +12,7 @@ import numpy as np
 from parse_args import parse_arguments
 
 from dataset import PACS
-from models.resnet import BaseResNet18
+from models.resnet import BaseResNet18, ASHResNet18, ASHResNet18_rec
 
 from globals import CONFIG
 
@@ -66,11 +66,22 @@ def train(model, data):
                     x, y = batch
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     loss = F.cross_entropy(model(x), y)
-
-                ######################################################
-                #elif... TODO: Add here train logic for the other experiments
-
-                ######################################################
+                elif CONFIG.experiment in ['base_DA']:
+                    x, y = batch
+                    x, y = x.to(CONFIG.device), y.to(CONFIG.device)
+                    
+                    z = model(x, test=False)
+                    
+                    loss = F.cross_entropy(z, y)
+                elif CONFIG.experiment in ['domain_adaptation']:
+                    x, y, xt = batch
+                    x, y, xt = x.to(CONFIG.device), y.to(CONFIG.device), xt.to(CONFIG.device)
+                    
+                    _ = model(x, test=False, target=True)
+                    
+                    zt = model(x, test=False)
+                    
+                    loss = F.cross_entropy(zt, y)
 
             # Optimization step
             scaler.scale(loss / CONFIG.grad_accum_steps).backward()
@@ -104,11 +115,10 @@ def main():
     # Load model
     if CONFIG.experiment in ['baseline']:
         model = BaseResNet18()
-
-    ######################################################
-    #elif... TODO: Add here model loading for the other experiments (eg. DA and optionally DG)
-
-    ######################################################
+    elif CONFIG.experiment in ['base_DA']:
+        model = ASHResNet18()
+    elif CONFIG.experiment in ['domain_adaptation']:
+        model = ASHResNet18_rec()
     
     model.to(CONFIG.device)
 
