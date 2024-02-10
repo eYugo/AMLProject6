@@ -16,7 +16,7 @@ class CASLayer(nn.Module):
         super(CASLayer, self).__init__()
         
     def forward_hook(self, module, input, output, Mt=None):
-        print('Forward hook inside CASLayer')
+        # print('Forward hook inside CASLayer')
         A = output.clone().detach()
         M = Mt.clone().detach() if Mt is not None else torch.bernoulli(torch.full_like(A, 0.5, device=A.device))
         
@@ -63,14 +63,14 @@ class RecordASLayer(nn.Module):
         super(RecordASLayer, self).__init__()
     
     def forward_hook(self, module, input, output):
-        print('Recording activation')
-        print(f"name: {module.__class__.__name__}")
+        # print('Recording activation')
+        # print(f"name: {module.__class__.__name__}")
         A = output.clone().detach()
         A_bin = torch.where(A > 0, torch.tensor(1.0, device=A.device), torch.tensor(0.0, device=A.device))
         return A_bin
 
 class ASHResNet18_rec(nn.Module):
-    def __init__(self):
+    def __init__(self, layer_list=[]):
         super(ASHResNet18_rec, self).__init__()
         self.resnet = resnet18(weights=ResNet18_Weights)
         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
@@ -79,11 +79,15 @@ class ASHResNet18_rec(nn.Module):
         self.rec = RecordASLayer()
         self.activation_maps = {}
         self.handles = []
+        
+        self.layer_list = layer_list
+        for elem in self.layer_list:
+            print(f"Executing ASM on layer: {elem}")
 
     def attach_forward_hook(self, Mt=None, target=False):
-        print('Attaching forward hook')
+        # print('Attaching forward hook')
         for name, module in self.resnet.named_modules():
-            if "layer4.0.conv1" in name :
+            if name in self.layer_list:
                 if target:
                     handle = module.register_forward_hook(
                         lambda module, input, output: self.record_activation(module, output, name))
@@ -97,7 +101,7 @@ class ASHResNet18_rec(nn.Module):
         self.activation_maps[layer_name] = self.rec.forward_hook(module, None, output)
     
     def detach_forward_hook(self):
-        print('Detaching forward hook')
+        # print('Detaching forward hook')
         for handle in self.handles:
             handle.remove()
         self.handles = []

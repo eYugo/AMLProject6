@@ -107,7 +107,7 @@ def train(model, data):
         torch.save(checkpoint, os.path.join('record', CONFIG.experiment_name, 'last.pth'))
 
 
-def main():
+def main(args):
     
     # Load dataset
     data = PACS.load_data()
@@ -118,7 +118,7 @@ def main():
     elif CONFIG.experiment in ['base_DA']:
         model = ASHResNet18()
     elif CONFIG.experiment in ['domain_adaptation']:
-        model = ASHResNet18_rec()
+        model = ASHResNet18_rec(layer_list=args.layer_list)
     
     model.to(CONFIG.device)
 
@@ -157,4 +157,4 @@ if __name__ == '__main__':
     torch.backends.cudnn.benchmark = True
     torch.use_deterministic_algorithms(mode=True, warn_only=True)
 
-    main()
+    main(args)
