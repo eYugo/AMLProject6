@@ -61,28 +61,37 @@ def train(model, data):
         for batch_idx, batch in enumerate(tqdm(data['train'])):
             
             # Compute loss
-            with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
+            # with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
 
-                if CONFIG.experiment in ['baseline']:
-                    x, y = batch
-                    x, y = x.to(CONFIG.device), y.to(CONFIG.device)
-                    loss = F.cross_entropy(model(x), y)
-                elif CONFIG.experiment in ['base_DA']:
-                    x, y = batch
-                    x, y = x.to(CONFIG.device), y.to(CONFIG.device)
+            #     if CONFIG.experiment in ['baseline']:
+            #         x, y = batch
+            #         x, y = x.to(CONFIG.device), y.to(CONFIG.device)
+            #         loss = F.cross_entropy(model(x), y)
+            #     elif CONFIG.experiment in ['base_DA']:
+            #         x, y = batch
+            #         x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     
-                    z = model(x, test=False)
+            #         z = model(x, test=False)
                     
-                    loss = F.cross_entropy(z, y)
-                elif CONFIG.experiment in ['domain_adaptation']:
-                    x, y, xt = batch
-                    x, y, xt = x.to(CONFIG.device), y.to(CONFIG.device), xt.to(CONFIG.device)
+            #         loss = F.cross_entropy(z, y)
+            if CONFIG.experiment in ['domain_adaptation']:
+                x, y, xt = batch
+                x, y, xt = x.to(CONFIG.device), y.to(CONFIG.device), xt.to(CONFIG.device)
+                # print(f"before recording activation_maps:")
+                # for key in model.activation_maps.keys():
+                #     print(f"key_before: {key}")
                     
-                    # model_copy = deepcopy(model)
+                with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
                     
-                    # _ = model_copy(xt, test=False, target=True)
-                    # model.activation_maps = model_copy.activation_maps
-                    _ = model(xt, test=False, target=True)
+                    with torch.no_grad():
+                        model.eval()
+                        _ = model(xt, test=False, target=True)
+                        model.train()
+                        
+                with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
+                    print(f"after recording activation_maps: ")
+                    for key in model.activation_maps.keys():
+                        print(f"key: {key}")
                     
                     zt = model(x, test=False)
                     

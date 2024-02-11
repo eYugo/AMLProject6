@@ -2,3 +2,5 @@ __pycache__/
 env/
 record/
 kfold/
+record_without_no_grad/
+output.txt

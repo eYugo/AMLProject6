@@ -38,6 +38,7 @@ class DomainAdaptationDataset(Dataset):
     def __getitem__(self, index):
         src_path, src_label = self.source_examples[index]
         
+        random.seed(42)
         targ_path, _ = random.choice(self.target_examples)
         src_img = Image.open(src_path).convert("RGB")
         targ_img = Image.open(targ_path).convert("RGB")
