@@ -39,7 +39,7 @@ $layers_combinations = @(
     "layer4.1.conv1",
 	# "layer4.1.bn1",
 	# "layer4.1.relu",
-	"layer4.1.conv2",
+	"layer4.1.conv2"
 	# "layer4.1.bn2"
 )
 

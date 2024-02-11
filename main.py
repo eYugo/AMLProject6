@@ -1,3 +1,4 @@
+from copy import deepcopy
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -77,6 +78,10 @@ def train(model, data):
                     x, y, xt = batch
                     x, y, xt = x.to(CONFIG.device), y.to(CONFIG.device), xt.to(CONFIG.device)
                     
+                    # model_copy = deepcopy(model)
+                    
+                    # _ = model_copy(xt, test=False, target=True)
+                    # model.activation_maps = model_copy.activation_maps
                     _ = model(xt, test=False, target=True)
                     
                     zt = model(x, test=False)

@@ -11,12 +11,13 @@
             "program": "main.py",
             "console": "integratedTerminal",
             "args": [
-                "--experiment=base_DA",
-                "--experiment_name=base_DA/cartoon/",
+                "--experiment=domain_adaptation",
+                "--experiment_name=domain_adaptation/cartoon/",
                 "--dataset_args={'root': 'data/PACS', 'source_domain': 'art_painting', 'target_domain': 'cartoon'}",
                 "--batch_size=128",
                 "--num_workers=5",
-                "--grad_accum_steps=1"
+                "--grad_accum_steps=1",
+                "--layer_list=layer4.1.conv1"
             ]
         }
     ]

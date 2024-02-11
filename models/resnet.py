@@ -48,7 +48,7 @@ class ASHResNet18(nn.Module):
             handle.remove()
         self.handles = []
 
-    def forward(self, x, test=True):
+def forward(self, x, test=True):
         if not test:
             self.attach_forward_hook()
             
@@ -84,17 +84,20 @@ class ASHResNet18_rec(nn.Module):
         for elem in self.layer_list:
             print(f"Executing ASM on layer: {elem}")
 
-    def attach_forward_hook(self, Mt=None, target=False):
+    def attach_forward_hook(self, Mt=None, target=False, frequency=2):
         # print('Attaching forward hook')
+        counter = 0
         for name, module in self.resnet.named_modules():
+            #if (isinstance(module, torch.nn.Conv2d)) and (counter % frequency == 0):
             if name in self.layer_list:
+                counter += 1
                 if target:
                     handle = module.register_forward_hook(
                         lambda module, input, output: self.record_activation(module, output, name))
                     self.handles.append(handle)
                 else:
                     handle = module.register_forward_hook(
-                        lambda module, input, output: self.cas.forward_hook(module, input, output, Mt))
+                        lambda module, input, output: self.cas.forward_hook(module, input, output, self.activation_maps[name]))
                     self.handles.append(handle)
     
     def record_activation(self, module, output, layer_name):
