@@ -3,6 +3,7 @@ from argparse import ArgumentParser
 def _clear_args(parsed_args):
     parsed_args.experiment_args = eval(parsed_args.experiment_args)
     parsed_args.dataset_args = eval(parsed_args.dataset_args)
+    parsed_args.layer_list = parsed_args.layer_list.split(',')
     return parsed_args
 
 def parse_arguments():
@@ -21,5 +22,8 @@ def parse_arguments():
     parser.add_argument('--epochs', type=int, default=30)
     parser.add_argument('--num_workers', type=int, default=5)
     parser.add_argument('--grad_accum_steps', type=int, default=1)
+    
+    parser.add_argument('--layer_list', type=str, default='')
+    parser.add_argument('--extension', type=int, default=0)
 
     return _clear_args(parser.parse_args())

@@ -1,4 +1,3 @@
-import copy
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -39,7 +38,7 @@ def evaluate(model, data):
     logging.info(f'Accuracy: {100 * accuracy:.2f} - Loss: {loss}')
 
 
-def train(model, data):
+def train(model: ASHResNet18|BaseResNet18, data):
 
     # Create optimizers & schedulers
     optimizer = torch.optim.SGD(model.parameters(), weight_decay=0.0005, momentum=0.9, nesterov=True, lr=0.001)
@@ -60,22 +59,31 @@ def train(model, data):
         model.train()
         
         for batch_idx, batch in enumerate(tqdm(data['train'])):
-            #target_batch = next(iter(data['test']))
-            # Compute loss
-            with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
-
-                if CONFIG.experiment in ['baseline', 'ash']:
+            
+            #Compute loss
+            if CONFIG.experiment in ['baseline']:
+                with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
                     x, y = batch
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     loss = F.cross_entropy(model(x), y)
-                elif CONFIG.experiment in ['domain_adaptation']:
-                    src_x, src_y, targ_x = batch
-                    src_x, src_y, targ_x = src_x.to(CONFIG.device), src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
-                    
-                    model_copy = copy.deepcopy(model)
-                    activation_maps = model_copy.record_activation_maps(targ_x)
-                    Zs = model(src_x, activation_maps, test=False)
-                    loss = F.cross_entropy(Zs, src_y)
+            elif CONFIG.experiment in ['base_DA']:
+                with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
+                    x, y = batch
+                    x, y = x.to(CONFIG.device), y.to(CONFIG.device)
+                    loss = F.cross_entropy(model(x), y)
+            elif CONFIG.experiment in ['domain_adaptation']:
+                with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
+                    x, y, xt = batch
+                    x, y, xt = x.to(CONFIG.device), y.to(CONFIG.device), xt.to(CONFIG.device)
+                    with torch.no_grad():
+                        model.eval()
+                        model.set_mode('record')
+                        _ = model(xt, test=False)
+                        model.train()
+                with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
+                    model.set_mode('apply')
+                    zt = model(x, test=False)
+                    loss = F.cross_entropy(zt, y)
 
             # Optimization step
             scaler.scale(loss / CONFIG.grad_accum_steps).backward()
@@ -100,37 +108,34 @@ def train(model, data):
         }
         torch.save(checkpoint, os.path.join('record', CONFIG.experiment_name, 'last.pth'))
 
-def main():
-    time_start = time.time()
+
+def main(args):
+    
     # Load dataset
     data = PACS.load_data()
     # Load model
     if CONFIG.experiment in ['baseline']:
         model = BaseResNet18()
-    elif CONFIG.experiment in ['domain_adaptation']:
+    elif CONFIG.experiment in ['base_DA']:
         model = ASHResNet18()
-
-    ######################################################
-    #elif... TODO: Add here model loading for the other experiments (eg. DA and optionally DG)
-
-    ######################################################
+    elif CONFIG.experiment in ['domain_adaptation']:
+        model = ASHResNet18(layer_list=args.layer_list)
     
     model.to(CONFIG.device)
+    model.extension = 2
+    #model.extension = args.extension
 
     if not CONFIG.test_only:
         train(model, data)
     else:
         evaluate(model, data['test'])
-    
-    time_end = time.time()
-    logging.info(f'Total time: {time_end - time_start:.2f}s')
-    
 
 if __name__ == '__main__':
     warnings.filterwarnings('ignore', category=UserWarning)
 
     # Parse arguments
     args = parse_arguments()
+    print(args)
     CONFIG.update(vars(args))
 
     # Setup output directory
@@ -156,5 +161,4 @@ if __name__ == '__main__':
     torch.backends.cudnn.benchmark = True
     torch.use_deterministic_algorithms(mode=True, warn_only=True)
 
-    main()
-
+    main(args)

@@ -38,6 +38,7 @@ class DomainAdaptationDataset(Dataset):
     def __getitem__(self, index):
         src_path, src_label = self.source_examples[index]
         
+        random.seed(42)
         targ_path, _ = random.choice(self.target_examples)
         src_img = Image.open(src_path).convert("RGB")
         targ_img = Image.open(targ_path).convert("RGB")
@@ -48,29 +49,6 @@ class DomainAdaptationDataset(Dataset):
         src_label = torch.tensor(src_label).long()
         return src_img, src_label, targ_img
 
-######################################################
-# TODO: modify 'BaseDataset' for the Domain Adaptation setting.
-# Hint: randomly sample 'target_examples' to obtain targ_x
-class DomainAdaptationDataset(Dataset):
-    def __init__(self, source_examples, target_examples, transform):
-        self.source_examples = source_examples
-        self.target_examples = target_examples
-        self.T = transform
-
-    def __len__(self):
-        return len(self.source_examples)
-
-    def __getitem__(self, index):
-        src_x, src_y = self.source_examples[index]
-        targ_x, _ = random.choice(self.target_examples)
-
-        src_x = Image.open(src_x).convert("RGB")
-        targ_x = Image.open(targ_x).convert("RGB")
-        src_x = self.T(src_x).to(CONFIG.dtype)
-        targ_x = self.T(targ_x).to(CONFIG.dtype)
-        src_y = torch.tensor(src_y).long()
-        
-        return src_x, src_y, targ_x
 
 # [OPTIONAL] TODO: modify 'BaseDataset' for the Domain Generalization setting.
 # Hint: combine the examples from the 3 source domains into a single 'examples' list

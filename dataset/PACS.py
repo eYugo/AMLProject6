@@ -12,6 +12,10 @@ def get_transform(size, mean, std, preprocess):
         transform.append(T.Resize(256))
         transform.append(T.RandomResizedCrop(size=size, scale=(0.7, 1.0)))
         transform.append(T.RandomHorizontalFlip())
+        # transform.append(T.ColorJitter(brightness=0.2, contrast=0.3, saturation=0.4, hue=0.1))
+        # transform.append(T.RandomHorizontalFlip())
+        # transform.append(T.RandomVerticalFlip())
+        # transform.append(T.RandomPerspective(distortion_scale=0.1, p=0.3, interpolation=3))
     else:
         transform.append(T.Resize(size))
     transform.append(T.ToTensor())
@@ -27,39 +31,33 @@ def load_data():
     mean, std = (0.485, 0.456, 0.406), (0.229, 0.224, 0.225) # ImageNet Pretrain statistics
     train_transform = get_transform(size=224, mean=mean, std=std, preprocess=True)
     test_transform = get_transform(size=224, mean=mean, std=std, preprocess=False)
+    
+    source_examples, target_examples = [], []
 
-    # Load examples & create Dataset
-    if CONFIG.experiment in ['baseline', 'domain_adaptation']:
-        source_examples, target_examples = [], []
+    # Load source
+    with open(os.path.join(CONFIG.dataset_args['root'], f"{CONFIG.dataset_args['source_domain']}.txt"), 'r') as f:
+        lines = f.readlines()
+    for line in lines:
+        line = line.strip().split()
+        path, label = line[0].split('/')[1:], int(line[1])
+        source_examples.append((os.path.join(CONFIG.dataset_args['root'], *path), label))
 
-        # Load source
-        with open(os.path.join(CONFIG.dataset_args['root'], f"{CONFIG.dataset_args['source_domain']}.txt"), 'r') as f:
-            lines = f.readlines()
-        for line in lines:
-            line = line.strip().split()
-            path, label = line[0].split('/')[1:], int(line[1])
-            source_examples.append((os.path.join(CONFIG.dataset_args['root'], *path), label))
+    # Load target
+    with open(os.path.join(CONFIG.dataset_args['root'], f"{CONFIG.dataset_args['target_domain']}.txt"), 'r') as f:
+        lines = f.readlines()
+    for line in lines:
+        line = line.strip().split()
+        path, label = line[0].split('/')[1:], int(line[1])
+        target_examples.append((os.path.join(CONFIG.dataset_args['root'], *path), label))
 
-        # Load target
-        with open(os.path.join(CONFIG.dataset_args['root'], f"{CONFIG.dataset_args['target_domain']}.txt"), 'r') as f:
-            lines = f.readlines()
-        for line in lines:
-            line = line.strip().split()
-            path, label = line[0].split('/')[1:], int(line[1])
-            target_examples.append((os.path.join(CONFIG.dataset_args['root'], *path), label))
-
-        if CONFIG.experiment == 'baseline':
-            train_dataset = BaseDataset(source_examples, transform=train_transform)
-            test_dataset = BaseDataset(target_examples, transform=test_transform)
-        elif CONFIG.experiment == 'domain_adaptation':
-            train_dataset = DomainAdaptationDataset(source_examples, target_examples, train_transform, test_transform)
-            test_dataset = BaseDataset(target_examples, transform=test_transform)
-        else:
-            raise ValueError(f"Unsupported experiment: {CONFIG.experiment}")
-
-    ######################################################
-    #elif... TODO: Add here how to create the Dataset object for the other experiments
-    ######################################################
+    if CONFIG.experiment == 'baseline' or CONFIG.experiment == 'base_DA':
+        train_dataset = BaseDataset(source_examples, transform=train_transform)
+        test_dataset = BaseDataset(target_examples, transform=test_transform)
+    elif CONFIG.experiment == 'domain_adaptation':
+        train_dataset = DomainAdaptationDataset(source_examples, target_examples, train_transform, test_transform)
+        test_dataset = BaseDataset(target_examples, transform=test_transform)
+    else:
+        raise ValueError(f"Unsupported experiment: {CONFIG.experiment}")
 
     # Dataloaders
     train_loader = SeededDataLoader(
