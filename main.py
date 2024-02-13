@@ -123,6 +123,8 @@ def main(args):
         model = ASHResNet18(layer_list=args.layer_list)
     
     model.to(CONFIG.device)
+    model.extension = 2
+    #model.extension = args.extension
 
     if not CONFIG.test_only:
         train(model, data)
@@ -135,6 +137,7 @@ if __name__ == '__main__':
 
     # Parse arguments
     args = parse_arguments()
+    print(args)
     CONFIG.update(vars(args))
 
     # Setup output directory
