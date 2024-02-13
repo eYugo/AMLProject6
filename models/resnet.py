@@ -55,8 +55,8 @@ class ASHResNet18(nn.Module):
                 return lambda module, input, output: self.cas.forward_hook(module, input, output, self.activation_maps.get(name))
         # target_sublayers = ['layer2.1.conv2']
         for name, module in self.resnet.named_modules():
-            #if name in self.layer_list:
-            if name == "layer3.0.bn1":
+            if name in self.layer_list:
+            #if name == "layer3.0.bn1":
                 print(f"Attaching forward hook to layer: {name} in mode: {self.mode}")
                 handle = module.register_forward_hook(create_hook_function(name))
                 self.handles.append(handle)
