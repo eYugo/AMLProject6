@@ -1,7 +1,7 @@
-from copy import deepcopy
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import time 
 from torchmetrics import Accuracy
 from tqdm import tqdm
 
@@ -113,7 +113,6 @@ def main(args):
     
     # Load dataset
     data = PACS.load_data()
-
     # Load model
     if CONFIG.experiment in ['baseline']:
         model = BaseResNet18()
@@ -130,7 +129,6 @@ def main(args):
         train(model, data)
     else:
         evaluate(model, data['test'])
-    
 
 if __name__ == '__main__':
     warnings.filterwarnings('ignore', category=UserWarning)
@@ -142,6 +140,7 @@ if __name__ == '__main__':
 
     # Setup output directory
     CONFIG.save_dir = os.path.join('record', CONFIG.experiment_name)
+    print(CONFIG.save_dir)
     os.makedirs(CONFIG.save_dir, exist_ok=True)
 
     # Setup logging
