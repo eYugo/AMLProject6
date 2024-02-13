@@ -12,6 +12,10 @@ def get_transform(size, mean, std, preprocess):
         transform.append(T.Resize(256))
         transform.append(T.RandomResizedCrop(size=size, scale=(0.7, 1.0)))
         transform.append(T.RandomHorizontalFlip())
+        # transform.append(T.ColorJitter(brightness=0.2, contrast=0.3, saturation=0.4, hue=0.1))
+        # transform.append(T.RandomHorizontalFlip())
+        # transform.append(T.RandomVerticalFlip())
+        # transform.append(T.RandomPerspective(distortion_scale=0.1, p=0.3, interpolation=3))
     else:
         transform.append(T.Resize(size))
     transform.append(T.ToTensor())

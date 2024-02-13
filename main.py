@@ -13,7 +13,7 @@ import numpy as np
 from parse_args import parse_arguments
 
 from dataset import PACS
-from models.resnet import BaseResNet18, ASHResNet18, ASHResNet18_rec
+from models.resnet import BaseResNet18, ASHResNet18
 
 from globals import CONFIG
 
@@ -38,7 +38,7 @@ def evaluate(model, data):
     logging.info(f'Accuracy: {100 * accuracy:.2f} - Loss: {loss}')
 
 
-def train(model, data):
+def train(model: ASHResNet18|BaseResNet18, data):
 
     # Create optimizers & schedulers
     optimizer = torch.optim.SGD(model.parameters(), weight_decay=0.0005, momentum=0.9, nesterov=True, lr=0.001)
@@ -60,41 +60,29 @@ def train(model, data):
         
         for batch_idx, batch in enumerate(tqdm(data['train'])):
             
-            # Compute loss
-            # with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
-
-            #     if CONFIG.experiment in ['baseline']:
-            #         x, y = batch
-            #         x, y = x.to(CONFIG.device), y.to(CONFIG.device)
-            #         loss = F.cross_entropy(model(x), y)
-            #     elif CONFIG.experiment in ['base_DA']:
-            #         x, y = batch
-            #         x, y = x.to(CONFIG.device), y.to(CONFIG.device)
-                    
-            #         z = model(x, test=False)
-                    
-            #         loss = F.cross_entropy(z, y)
-            if CONFIG.experiment in ['domain_adaptation']:
-                x, y, xt = batch
-                x, y, xt = x.to(CONFIG.device), y.to(CONFIG.device), xt.to(CONFIG.device)
-                # print(f"before recording activation_maps:")
-                # for key in model.activation_maps.keys():
-                #     print(f"key_before: {key}")
-                    
+            #Compute loss
+            if CONFIG.experiment in ['baseline']:
                 with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
-                    
+                    x, y = batch
+                    x, y = x.to(CONFIG.device), y.to(CONFIG.device)
+                    loss = F.cross_entropy(model(x), y)
+            elif CONFIG.experiment in ['base_DA']:
+                with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
+                    x, y = batch
+                    x, y = x.to(CONFIG.device), y.to(CONFIG.device)
+                    loss = F.cross_entropy(model(x), y)
+            elif CONFIG.experiment in ['domain_adaptation']:
+                with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
+                    x, y, xt = batch
+                    x, y, xt = x.to(CONFIG.device), y.to(CONFIG.device), xt.to(CONFIG.device)
                     with torch.no_grad():
                         model.eval()
-                        _ = model(xt, test=False, target=True)
+                        model.set_mode('record')
+                        _ = model(xt, test=False)
                         model.train()
-                        
                 with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
-                    print(f"after recording activation_maps: ")
-                    for key in model.activation_maps.keys():
-                        print(f"key: {key}")
-                    
+                    model.set_mode('apply')
                     zt = model(x, test=False)
-                    
                     loss = F.cross_entropy(zt, y)
 
             # Optimization step
@@ -132,7 +120,7 @@ def main(args):
     elif CONFIG.experiment in ['base_DA']:
         model = ASHResNet18()
     elif CONFIG.experiment in ['domain_adaptation']:
-        model = ASHResNet18_rec(layer_list=args.layer_list)
+        model = ASHResNet18(layer_list=args.layer_list)
     
     model.to(CONFIG.device)
 
