@@ -25,13 +25,16 @@ class CASLayer(nn.Module):
         elif extension == 1:
             return A * M
         elif extension == 2:
-            topK = int(A.size(1) * 0.2)
-            M_bin = torch.where(M <= 0, torch.tensor(0.0, device=M.device), torch.tensor(1.0, device=M.device))
-            _, indices = A.flatten().topk(topK)
-            A_topK = torch.zeros_like(A).flatten()
-            A_topK[indices] = A.flatten()[indices]
-            A_topK = A_topK.view(A.size())
-            return A_topK * M_bin
+            topK = int(A.flatten().size(0) * 0.2)
+            print(f"TopK: {topK}")
+            #M_bin = torch.where(M <= 0, torch.tensor(0.0, device=M.device), torch.tensor(1.0, device=M.device))
+            
+            _, indices = A.flatten().topk(topK, sorted=True)
+            mask = torch.zeros_like(A.flatten())
+            mask[indices] = 1
+            mask = mask.reshape_as(A)
+            M_filtered = M * mask
+            return A * M_filtered
         else:
             raise ValueError("Invalid extension value")
 
@@ -68,9 +71,9 @@ class ASHResNet18(nn.Module):
                 )
 
         for name, module in self.resnet.named_modules():
-            #if name in self.layer_list:
-            if name == "layer3.0.bn1":
-                print(f"Attaching forward hook to layer: {name} in mode: {self.mode}")
+            if name in self.layer_list:
+            #if name == "layer3.0.bn1":
+                #print(f"Attaching forward hook to layer: {name} in mode: {self.mode}")
                 handle = module.register_forward_hook(create_hook_function(name))
                 self.handles.append(handle)
         

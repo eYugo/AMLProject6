@@ -135,12 +135,10 @@ if __name__ == '__main__':
 
     # Parse arguments
     args = parse_arguments()
-    print(args)
     CONFIG.update(vars(args))
 
     # Setup output directory
     CONFIG.save_dir = os.path.join('record', CONFIG.experiment_name)
-    print(CONFIG.save_dir)
     os.makedirs(CONFIG.save_dir, exist_ok=True)
 
     # Setup logging
