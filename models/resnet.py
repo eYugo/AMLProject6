@@ -18,7 +18,8 @@ class CASLayer(nn.Module):
         
     def forward_hook(self, module, input, output, Mt=None, extension=0):
         A = output.clone().detach()
-        M = Mt.clone().detach()  if Mt is not None else torch.bernoulli(torch.full_like(A, 0.9, device=A.device))
+        torch.manual_seed(42)
+        M = Mt.clone().detach() if Mt is not None else torch.bernoulli(torch.full_like(A, self.topK, device=A.device))
         if extension == 0:
             A_bin = torch.where(A <= 0, torch.tensor(0.0, device=A.device), torch.tensor(1.0, device=A.device))
             M_bin = torch.where(M <= 0, torch.tensor(0.0, device=M.device), torch.tensor(1.0, device=M.device))

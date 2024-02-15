@@ -50,7 +50,7 @@ def load_data():
         path, label = line[0].split('/')[1:], int(line[1])
         target_examples.append((os.path.join(CONFIG.dataset_args['root'], *path), label))
 
-    if CONFIG.experiment == 'baseline' or CONFIG.experiment == 'base_DA':
+    if CONFIG.experiment == 'baseline' or CONFIG.experiment == 'random_DA':
         train_dataset = BaseDataset(source_examples, transform=train_transform)
         test_dataset = BaseDataset(target_examples, transform=test_transform)
     elif CONFIG.experiment == 'domain_adaptation':

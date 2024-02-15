@@ -66,7 +66,7 @@ def train(model: ASHResNet18|BaseResNet18, data):
                     x, y = batch
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
                     loss = F.cross_entropy(model(x), y)
-            elif CONFIG.experiment in ['base_DA']:
+            elif CONFIG.experiment in ['random_DA']:
                 with torch.autocast(device_type=CONFIG.device, dtype=torch.float16, enabled=True):
                     x, y = batch
                     x, y = x.to(CONFIG.device), y.to(CONFIG.device)
@@ -116,13 +116,11 @@ def main(args):
     # Load model
     if CONFIG.experiment in ['baseline']:
         model = BaseResNet18()
-    elif CONFIG.experiment in ['base_DA']:
-        model = ASHResNet18()
-    elif CONFIG.experiment in ['domain_adaptation']:
+    else:
         model = ASHResNet18(layer_list=args.layer_list, topK=args.topK)
     
     model.to(CONFIG.device)
-    model.extension = 2
+    model.extension = 0
     #model.extension = args.extension
 
     if not CONFIG.test_only:
