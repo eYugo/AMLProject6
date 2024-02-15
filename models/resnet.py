@@ -12,8 +12,9 @@ class BaseResNet18(nn.Module):
         return self.resnet(x)
 
 class CASLayer(nn.Module):
-    def __init__(self):
+    def __init__(self, K):
         super(CASLayer, self).__init__()
+        self.topK = K
         
     def forward_hook(self, module, input, output, Mt=None, extension=0):
         A = output.clone().detach()
@@ -23,18 +24,22 @@ class CASLayer(nn.Module):
             M_bin = torch.where(M <= 0, torch.tensor(0.0, device=M.device), torch.tensor(1.0, device=M.device))
             return A_bin * M_bin
         elif extension == 1:
-            return A * M
+            A_semi_bin = torch.where(A <= 0, torch.tensor(0.0, device=A.device), A)
+            M_semi_bin = torch.where(M <= 0, torch.tensor(0.0, device=M.device), M)
+            return A_semi_bin * M_semi_bin
         elif extension == 2:
-            topK = int(A.flatten().size(0) * 0.2)
-            print(f"TopK: {topK}")
-            #M_bin = torch.where(M <= 0, torch.tensor(0.0, device=M.device), torch.tensor(1.0, device=M.device))
-            
-            _, indices = A.flatten().topk(topK, sorted=True)
+            topK = int(A.flatten().size(0) * self.topK)
+            values, indices = A.flatten().topk(topK, sorted=True)
+            A_bin = torch.where(A <= 0, torch.tensor(0.0, device=A.device), A)
+            M_bin = torch.where(M <= 0, torch.tensor(0.0, device=M.device), torch.tensor(1.0, device=M.device))
             mask = torch.zeros_like(A.flatten())
             mask[indices] = 1
             mask = mask.reshape_as(A)
-            M_filtered = M * mask
-            return A * M_filtered
+            A_filtered = A_bin * mask
+            # lower_top_k = values[-1]
+            # M_bin = torch.where(A <= lower_top_k, torch.tensor(0.0, device=A.device), torch.tensor(1.0, device=A.device))
+            
+            return A_filtered * M_bin
         else:
             raise ValueError("Invalid extension value")
 
@@ -47,12 +52,13 @@ class RecordASLayer(nn.Module):
         return A
 
 class ASHResNet18(nn.Module):
-    def __init__(self, layer_list=[], extension=0):
+    def __init__(self, topK, layer_list=[], extension=0):
         super(ASHResNet18, self).__init__()
         self.resnet = resnet18(weights=ResNet18_Weights)
         self.resnet.fc = nn.Linear(self.resnet.fc.in_features, 7)
         self.mode = ''
-        self.cas = CASLayer()
+        self.topK = topK
+        self.cas = CASLayer(self.topK)
         self.rec = RecordASLayer()
         self.activation_maps = {}
         self.handles = []
@@ -72,8 +78,7 @@ class ASHResNet18(nn.Module):
 
         for name, module in self.resnet.named_modules():
             if name in self.layer_list:
-            #if name == "layer3.0.bn1":
-                #print(f"Attaching forward hook to layer: {name} in mode: {self.mode}")
+            #if name == "layer4.0.downsample.1":
                 handle = module.register_forward_hook(create_hook_function(name))
                 self.handles.append(handle)
         

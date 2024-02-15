@@ -25,5 +25,6 @@ def parse_arguments():
     
     parser.add_argument('--layer_list', type=str, default='')
     parser.add_argument('--extension', type=int, default=0)
+    parser.add_argument('--topK', type=float, default=0.7)
 
     return _clear_args(parser.parse_args())

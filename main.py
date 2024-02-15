@@ -119,7 +119,7 @@ def main(args):
     elif CONFIG.experiment in ['base_DA']:
         model = ASHResNet18()
     elif CONFIG.experiment in ['domain_adaptation']:
-        model = ASHResNet18(layer_list=args.layer_list)
+        model = ASHResNet18(layer_list=args.layer_list, topK=args.topK)
     
     model.to(CONFIG.device)
     model.extension = 2
