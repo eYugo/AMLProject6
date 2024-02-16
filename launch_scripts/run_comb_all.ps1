@@ -82,9 +82,10 @@ $layers_combinations = @(
 )
 
 $topKvalue = @(
-	0.1,
-	0.5,
-	0.9
+	0.001,
+	0.01,
+	0.7,
+	1
 )
 
 foreach ($layer_comb in $layers_combinations) {
@@ -93,7 +94,7 @@ foreach ($layer_comb in $layers_combinations) {
 		$folder_name = $layer_comb.Replace(".", "_")
 		$folder_name = $folder_name.Replace(",", "_")
 		$top_k_folder=$topK -replace '\.', '_'
-		$experiment_folder = $task_name + "_" + $folder_name+"_"+ $top_k_folder #+"_"+"variation2"
+		$experiment_folder = $task_name + "_" + $folder_name+"_"+ $top_k_folder+"_"+"variation2_0_1"
 
     	py main.py --experiment=$task_name --experiment_name=$experiment_folder/"cartoon"/ --dataset_args="{'root': 'data/PACS', 'source_domain': 'art_painting', 'target_domain': 'cartoon'}" --batch_size=128 --num_workers=5 --grad_accum_steps=1 --layer_list=$layer_comb --topK=$topK
 

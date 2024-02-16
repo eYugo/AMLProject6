@@ -19,7 +19,7 @@ class CASLayer(nn.Module):
     def forward_hook(self, module, input, output, Mt=None, extension=0):
         A = output.clone().detach()
         torch.manual_seed(42)
-        M = Mt.clone().detach() if Mt is not None else torch.bernoulli(torch.full_like(A, self.topK, device=A.device))
+        M = Mt.clone().detach() if Mt is not None else torch.bernoulli(torch.full_like(A, 0.1, device=A.device))
         if extension == 0:
             A_bin = torch.where(A <= 0, torch.tensor(0.0, device=A.device), torch.tensor(1.0, device=A.device))
             M_bin = torch.where(M <= 0, torch.tensor(0.0, device=M.device), torch.tensor(1.0, device=M.device))
@@ -37,9 +37,6 @@ class CASLayer(nn.Module):
             mask[indices] = 1
             mask = mask.reshape_as(A)
             A_filtered = A_bin * mask
-            # lower_top_k = values[-1]
-            # M_bin = torch.where(A <= lower_top_k, torch.tensor(0.0, device=A.device), torch.tensor(1.0, device=A.device))
-            
             return A_filtered * M_bin
         else:
             raise ValueError("Invalid extension value")
@@ -79,7 +76,6 @@ class ASHResNet18(nn.Module):
 
         for name, module in self.resnet.named_modules():
             if name in self.layer_list:
-            #if name == "layer4.0.downsample.1":
                 handle = module.register_forward_hook(create_hook_function(name))
                 self.handles.append(handle)
         
@@ -91,7 +87,7 @@ class ASHResNet18(nn.Module):
             handle.remove()
         self.handles = []
         if self.mode != 'record':
-            self.activation_maps = {}
+            self.activation_maps.clear()
         self.set_mode('')
     
     def set_mode(self, mode):
@@ -101,7 +97,6 @@ class ASHResNet18(nn.Module):
         if not test:
             self.attach_forward_hook()
         x = self.resnet(x)
-        
         if not test:
             self.detach_forward_hook()
         return x
