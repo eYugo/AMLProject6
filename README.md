@@ -1,6 +1,12 @@
 # AML 2023/2024 Project - Activation Shaping for Domain Adaptation
 Official repository for the "Activation Shaping for Domain Adaptation" project - Advanced Machine Learning Course 2023/2024 @ PoliTo
 
+## Authors
+- [Leonardo Iurada](https://github.com/iurada/Activation-Shaping-AML) for the initial commit
+- [s317661 - Tcaciuc Claudiu Constantin](https://github.com/ClaudiuTcaciuc)
+- [s313848 - Gabriele Tomatis](https://github.com/GabriTom)
+- [s307135 - Hioki Eric Yugo](https://github.com/eYugo)
+
 ## Getting Started
 Make sure to have a CUDA capable device, supporting at least CUDA 11.4, installed and correctly configured on your system. 
 
@@ -41,12 +47,21 @@ In the following, you can find a brief description of the included files, alongs
 | `models/resnet.py` | contains the architectures and modules used in the project. | (1) Activation Shaping Module. (2) Custom ResNet18 with the Activation Shaping Module. |
 
 ## Running The Experiments
-To run the experiments you can use, copy and modify the provided launch script `launch_scripts/baseline.sh`.
+To run the experiments you can use, copy and modify the provided launch script `launch_scripts/run_single.ps1`.
 As an example, to reproduce the baseline you can launch the three experiments as
 ```
-./launch_scripts/baseline.sh cartoon
-./launch_scripts/baseline.sh sketch
-./launch_scripts/baseline.sh photo
+./launch_scripts/run_single.ps1 baseline cartoon
+./launch_scripts/run_single.ps1 baseline photo
+./launch_scripts/run_single.ps1 baseline sketch
+```
+Other scipt provided are `launch_scripts/run_comb_single.ps1` and `launch_scripts/run_all.ps1` that can be used to run the experiments for the combination of the domains and all the experiments respectively. As an example, to reproduce the baseline, random_DA and domain_adaptation you can launch the three experiments as
+```
+./launch_scripts/run_all.ps1 baseline
+./launch_scripts/run_comb_all.ps1 baseline
+./launch_scripts/run_all.ps1 random_DA
+./launch_scripts/run_comb_all.ps1 random_DA
+./launch_scripts/run_all.ps1 domain_adaptation
+./launch_scripts/run_comb_all.ps1 domain_adaptation
 ```
 where the argument following the invocation of the script is programmed to be the target domain.
 
@@ -68,12 +83,26 @@ In the following, you can find a brief description of the relevant command line 
 | `--cpu` | if set, the experiment will run on the CPU. |
 | `--test_only` | if set, the experiment will skip the training procedure and just run the evaluation on the test set. |
 | `--seed` | the integer used to seed all the experiments, to make results as reproducible as possible. *Do not change it*, it defaults to 0. |
+| `--layer_list` | a string that contains the layer list of where to attach the forward hook. |
+| `--extension` | a number that sets which type of ASM to compute, the default value is 0, value supported are 0, 1, 2; 1 for extension 1 and 2 for extension 2. |
 
 ## Baseline Results (see point 0. of the project)
 |          | Art Painting &#8594; Cartoon | Art Painting &#8594; Sketch | Art Painting &#8594; Photo | Average |
 | :------: | :--------------------------: | :-------------------------: | :------------------------: | :-----: |
 | Baseline |            54.52             |             40.44           |            95.93           |  63.63  |
+| BestRand |            59.56             |             44.03           |            94.19           |  65.93  |
+|  BestDA  |            52.47             |             44.64           |            94.61           |  63.91  |
+| BestDAv1 |            50.38             |             38.71           |            95.99           |  61.69  |
+| BestDAv2 |            50.81             |             38.84           |            95.81           |  61.82  |
 
+All the results can be found in the `all_tested_results.txt` file.
 
-## Bug Reporting
-You are encouraged to share in the project's dedicated Slack channel any bugs you discover in the code. It's incredibly valuable for everyone involved to be aware of any issues as soon as they arise, helping to address them promptly. Your contribution is greatly appreciated!
+## Disclaimer
+The test were done on a pc with the following specs:
+- CPU: AMD Ryzen 7 5800X
+- GPU: NVIDIA GeForce RTX 3060
+- RAM: 32GB DDR4
+- OS: Windows 11
+
+The results may vary on different hardware configurations. The tried configurations are not exhaustive and the results may be improved by further tuning the hyperparameters, and testing different combination of layers for the activation shaping module.
+

@@ -1,0 +1,562 @@
+baseline\cartoon\log.txt: Accuracy: 54.48 - Loss: 0.010685722715516953
+baseline\photo\log.txt: Accuracy: 95.93 - Loss: 0.001070969094505567
+baseline\sketch\log.txt: Accuracy: 40.37 - Loss: 0.015134757356687368
+
+domain_adaptation_avgpool\cartoon\log.txt: Accuracy: 19.07 - Loss: 0.016198481461700727
+domain_adaptation_avgpool\photo\log.txt: Accuracy: 37.84 - Loss: 0.01484566270234342
+domain_adaptation_avgpool\sketch\log.txt: Accuracy: 7.92 - Loss: 0.01698159127782762
+
+domain_adaptation_layer1\cartoon\log.txt: Accuracy: 23.12 - Loss: 0.017379623554875826
+domain_adaptation_layer1\photo\log.txt: Accuracy: 44.37 - Loss: 0.023604396520974392
+domain_adaptation_layer1\sketch\log.txt: Accuracy: 22.47 - Loss: 0.01907176906506079
+
+domain_adaptation_layer1_0\cartoon\log.txt: Accuracy: 20.22 - Loss: 0.018199911398285484
+domain_adaptation_layer1_0\photo\log.txt: Accuracy: 12.75 - Loss: 0.028369154330499156
+domain_adaptation_layer1_0\sketch\log.txt: Accuracy: 31.03 - Loss: 0.014350934986183436
+
+domain_adaptation_layer1_0_bn1\cartoon\log.txt: Accuracy: 41.13 - Loss: 0.014937487732835191
+domain_adaptation_layer1_0_bn1\photo\log.txt: Accuracy: 72.99 - Loss: 0.006812378814343564
+domain_adaptation_layer1_0_bn1\sketch\log.txt: Accuracy: 31.92 - Loss: 0.021187326969703543
+
+domain_adaptation_layer1_0_bn2\cartoon\log.txt: Accuracy: 40.61 - Loss: 0.014823936701532923
+domain_adaptation_layer1_0_bn2\photo\log.txt: Accuracy: 91.50 - Loss: 0.0021350281547286554
+domain_adaptation_layer1_0_bn2\sketch\log.txt: Accuracy: 31.10 - Loss: 0.017713252370610555
+
+domain_adaptation_layer1_0_conv1\cartoon\log.txt: Accuracy: 15.74 - Loss: 0.023863802997732324
+domain_adaptation_layer1_0_conv1\photo\log.txt: Accuracy: 11.20 - Loss: 0.027011691167682945
+domain_adaptation_layer1_0_conv1\sketch\log.txt: Accuracy: 17.03 - Loss: 0.019868477151180897
+
+domain_adaptation_layer1_0_conv2\cartoon\log.txt: Accuracy: 43.90 - Loss: 0.011898431113250426
+domain_adaptation_layer1_0_conv2\photo\log.txt: Accuracy: 84.01 - Loss: 0.0036712645491707827
+domain_adaptation_layer1_0_conv2\sketch\log.txt: Accuracy: 19.62 - Loss: 0.019076969642377015
+
+domain_adaptation_layer1_0_relu\cartoon\log.txt: Accuracy: 14.25 - Loss: 0.02094677667874118
+domain_adaptation_layer1_0_relu\photo\log.txt: Accuracy: 39.82 - Loss: 0.014867871589289454
+domain_adaptation_layer1_0_relu\sketch\log.txt: Accuracy: 26.09 - Loss: 0.015352405765093625
+
+domain_adaptation_layer1_1\cartoon\log.txt: Accuracy: 23.38 - Loss: 0.017272227326147385
+domain_adaptation_layer1_1\photo\log.txt: Accuracy: 44.67 - Loss: 0.023504834894291653
+domain_adaptation_layer1_1\sketch\log.txt: Accuracy: 22.47 - Loss: 0.01907176906506079
+
+domain_adaptation_layer1_1_bn1\cartoon\log.txt: Accuracy: 49.57 - Loss: 0.012207058843212526
+domain_adaptation_layer1_1_bn1\photo\log.txt: Accuracy: 91.56 - Loss: 0.002029976320123958
+domain_adaptation_layer1_1_bn1\sketch\log.txt: Accuracy: 37.41 - Loss: 0.014889993818396677
+
+domain_adaptation_layer1_1_bn2\cartoon\log.txt: Accuracy: 49.27 - Loss: 0.012044461784127833
+domain_adaptation_layer1_1_bn2\photo\log.txt: Accuracy: 94.97 - Loss: 0.0014188064898024062
+domain_adaptation_layer1_1_bn2\sketch\log.txt: Accuracy: 32.50 - Loss: 0.019546125636934537
+
+domain_adaptation_layer1_1_bn2_0_001_variation2\cartoon\log.txt: Accuracy: 14.51 - Loss: 0.017886933511434562
+domain_adaptation_layer1_1_bn2_0_001_variation2\photo\log.txt: Accuracy: 14.43 - Loss: 0.018464493180463414
+domain_adaptation_layer1_1_bn2_0_001_variation2\sketch\log.txt: Accuracy: 18.22 - Loss: 0.01620339661586312
+
+domain_adaptation_layer1_1_bn2_0_01_variation2\cartoon\log.txt: Accuracy: 46.97 - Loss: 0.012965969102450809
+domain_adaptation_layer1_1_bn2_0_01_variation2\photo\log.txt: Accuracy: 86.89 - Loss: 0.003983367230007035
+domain_adaptation_layer1_1_bn2_0_01_variation2\sketch\log.txt: Accuracy: 30.06 - Loss: 0.01612915301571732
+
+domain_adaptation_layer1_1_bn2_0_7_variation2\cartoon\log.txt: Accuracy: 51.24 - Loss: 0.01188227567351312
+domain_adaptation_layer1_1_bn2_0_7_variation2\photo\log.txt: Accuracy: 93.47 - Loss: 0.0015941201090188084
+domain_adaptation_layer1_1_bn2_0_7_variation2\sketch\log.txt: Accuracy: 33.98 - Loss: 0.01715022320964616
+
+domain_adaptation_layer1_1_bn2_1_variation2\cartoon\log.txt: Accuracy: 50.90 - Loss: 0.011936571258326846
+domain_adaptation_layer1_1_bn2_1_variation2\photo\log.txt: Accuracy: 93.47 - Loss: 0.0015920258227534994
+domain_adaptation_layer1_1_bn2_1_variation2\sketch\log.txt: Accuracy: 34.00 - Loss: 0.017189960210916195
+
+domain_adaptation_layer1_1_bn2_layer3_0_bn1\cartoon\log.txt: Accuracy: 57.59 - Loss: 0.009713022674055636
+domain_adaptation_layer1_1_bn2_layer3_0_bn1\photo\log.txt: Accuracy: 82.81 - Loss: 0.004204735231256771
+domain_adaptation_layer1_1_bn2_layer3_0_bn1\sketch\log.txt: Accuracy: 40.70 - Loss: 0.013882688982670591
+
+domain_adaptation_layer1_1_bn2_layer3_0_bn1_layer2_1_conv2\cartoon\log.txt: Accuracy: 40.70 - Loss: 0.014054768928565059
+domain_adaptation_layer1_1_bn2_layer3_0_bn1_layer2_1_conv2\photo\log.txt: Accuracy: 65.63 - Loss: 0.007881731740728823
+domain_adaptation_layer1_1_bn2_layer3_0_bn1_layer2_1_conv2\sketch\log.txt: Accuracy: 34.49 - Loss: 0.013469035888209724
+
+domain_adaptation_layer1_1_bn2_variation1\cartoon\log.txt: Accuracy: 46.67 - Loss: 0.01328427217099752
+domain_adaptation_layer1_1_bn2_variation1\photo\log.txt: Accuracy: 88.26 - Loss: 0.003395057636909856
+domain_adaptation_layer1_1_bn2_variation1\sketch\log.txt: Accuracy: 30.26 - Loss: 0.017410454031892574
+
+domain_adaptation_layer1_1_conv1\cartoon\log.txt: Accuracy: 46.08 - Loss: 0.012761789402660656
+domain_adaptation_layer1_1_conv1\photo\log.txt: Accuracy: 78.68 - Loss: 0.005571297516009051
+domain_adaptation_layer1_1_conv1\sketch\log.txt: Accuracy: 19.42 - Loss: 0.016869254256666206
+
+domain_adaptation_layer1_1_conv2\cartoon\log.txt: Accuracy: 22.82 - Loss: 0.018547078753494158
+domain_adaptation_layer1_1_conv2\photo\log.txt: Accuracy: 61.92 - Loss: 0.008797130292047284
+domain_adaptation_layer1_1_conv2\sketch\log.txt: Accuracy: 19.73 - Loss: 0.02067430154698955
+
+domain_adaptation_layer1_1_relu\cartoon\log.txt: Accuracy: 17.06 - Loss: 0.02652940169332784
+domain_adaptation_layer1_1_relu\photo\log.txt: Accuracy: 39.40 - Loss: 0.022968364524805617
+domain_adaptation_layer1_1_relu\sketch\log.txt: Accuracy: 24.71 - Loss: 0.01789081108785519
+
+domain_adaptation_layer2\cartoon\log.txt: Accuracy: 33.62 - Loss: 0.015151105388846413
+domain_adaptation_layer2\photo\log.txt: Accuracy: 48.44 - Loss: 0.011535449406344019
+domain_adaptation_layer2\sketch\log.txt: Accuracy: 24.54 - Loss: 0.0197904331443206
+
+domain_adaptation_layer2_0\cartoon\log.txt: Accuracy: 26.88 - Loss: 0.017927623140933976
+domain_adaptation_layer2_0\photo\log.txt: Accuracy: 54.97 - Loss: 0.011521437942624805
+domain_adaptation_layer2_0\sketch\log.txt: Accuracy: 15.83 - Loss: 0.017736634761512233
+
+domain_adaptation_layer2_0_bn1\cartoon\log.txt: Accuracy: 43.13 - Loss: 0.013420860718541585
+domain_adaptation_layer2_0_bn1\photo\log.txt: Accuracy: 79.94 - Loss: 0.005283877949514789
+domain_adaptation_layer2_0_bn1\sketch\log.txt: Accuracy: 27.97 - Loss: 0.013037408451052166
+
+domain_adaptation_layer2_0_bn2\cartoon\log.txt: Accuracy: 43.17 - Loss: 0.013419884222054238
+domain_adaptation_layer2_0_bn2\photo\log.txt: Accuracy: 71.68 - Loss: 0.0063053125482119485
+domain_adaptation_layer2_0_bn2\sketch\log.txt: Accuracy: 27.82 - Loss: 0.015824369344738003
+
+domain_adaptation_layer2_0_conv1\cartoon\log.txt: Accuracy: 31.95 - Loss: 0.017316912195991737
+domain_adaptation_layer2_0_conv1\photo\log.txt: Accuracy: 77.19 - Loss: 0.00626222849070669
+domain_adaptation_layer2_0_conv1\sketch\log.txt: Accuracy: 27.97 - Loss: 0.01499497857097452
+
+domain_adaptation_layer2_0_conv2\cartoon\log.txt: Accuracy: 49.91 - Loss: 0.013052562000579597
+domain_adaptation_layer2_0_conv2\photo\log.txt: Accuracy: 80.84 - Loss: 0.004335807651995185
+domain_adaptation_layer2_0_conv2\sketch\log.txt: Accuracy: 26.57 - Loss: 0.017043890343819236
+
+domain_adaptation_layer2_0_downsample_0\cartoon\log.txt: Accuracy: 16.60 - Loss: 0.15548240219412923
+domain_adaptation_layer2_0_downsample_0\photo\log.txt: Accuracy: 11.32 - Loss: 0.09127607029600593
+domain_adaptation_layer2_0_downsample_0\sketch\log.txt: Accuracy: 17.59 - Loss: 0.0973834867360908
+
+domain_adaptation_layer2_0_downsample_1\cartoon\log.txt: Accuracy: 38.57 - Loss: 0.015024163261208518
+domain_adaptation_layer2_0_downsample_1\photo\log.txt: Accuracy: 38.68 - Loss: 0.013716643334862715
+domain_adaptation_layer2_0_downsample_1\sketch\log.txt: Accuracy: 18.58 - Loss: 0.017170557359242507
+
+domain_adaptation_layer2_1\cartoon\log.txt: Accuracy: 33.70 - Loss: 0.015153182956545833
+domain_adaptation_layer2_1\photo\log.txt: Accuracy: 48.98 - Loss: 0.011482126805596723
+domain_adaptation_layer2_1\sketch\log.txt: Accuracy: 24.76 - Loss: 0.01967575320095529
+
+domain_adaptation_layer2_1_bn1\cartoon\log.txt: Accuracy: 51.11 - Loss: 0.012008857519171953
+domain_adaptation_layer2_1_bn1\photo\log.txt: Accuracy: 94.43 - Loss: 0.001342971376450119
+domain_adaptation_layer2_1_bn1\sketch\log.txt: Accuracy: 38.48 - Loss: 0.014926042283543136
+
+domain_adaptation_layer2_1_bn2\cartoon\log.txt: Accuracy: 52.99 - Loss: 0.011294138264991725
+domain_adaptation_layer2_1_bn2\photo\log.txt: Accuracy: 79.64 - Loss: 0.004275443235378779
+domain_adaptation_layer2_1_bn2\sketch\log.txt: Accuracy: 26.04 - Loss: 0.021364207458453615
+
+domain_adaptation_layer2_1_bn2_0_001_variation2\cartoon\log.txt: Accuracy: 33.96 - Loss: 0.01609692029629551
+domain_adaptation_layer2_1_bn2_0_001_variation2\photo\log.txt: Accuracy: 92.34 - Loss: 0.0017990262844337676
+domain_adaptation_layer2_1_bn2_0_001_variation2\sketch\log.txt: Accuracy: 27.77 - Loss: 0.016484450599139323
+
+domain_adaptation_layer2_1_bn2_0_01_variation2\cartoon\log.txt: Accuracy: 38.52 - Loss: 0.014537810897867834
+domain_adaptation_layer2_1_bn2_0_01_variation2\photo\log.txt: Accuracy: 92.63 - Loss: 0.0016463529340878219
+domain_adaptation_layer2_1_bn2_0_01_variation2\sketch\log.txt: Accuracy: 32.30 - Loss: 0.015784874888405784
+
+domain_adaptation_layer2_1_bn2_0_7_variation2\cartoon\log.txt: Accuracy: 44.11 - Loss: 0.01332491860047949
+domain_adaptation_layer2_1_bn2_0_7_variation2\photo\log.txt: Accuracy: 92.63 - Loss: 0.0016001679047852933
+domain_adaptation_layer2_1_bn2_0_7_variation2\sketch\log.txt: Accuracy: 34.77 - Loss: 0.017091106051675357
+
+domain_adaptation_layer2_1_bn2_1_variation2\cartoon\log.txt: Accuracy: 43.90 - Loss: 0.013310817175198334
+domain_adaptation_layer2_1_bn2_1_variation2\photo\log.txt: Accuracy: 92.75 - Loss: 0.001602679841264993
+domain_adaptation_layer2_1_bn2_1_variation2\sketch\log.txt: Accuracy: 34.87 - Loss: 0.016935138946333195
+
+domain_adaptation_layer2_1_conv1\cartoon\log.txt: Accuracy: 40.91 - Loss: 0.015102382965462199
+domain_adaptation_layer2_1_conv1\photo\log.txt: Accuracy: 88.62 - Loss: 0.0032969667046459134
+domain_adaptation_layer2_1_conv1\sketch\log.txt: Accuracy: 29.55 - Loss: 0.018730592654843038
+
+domain_adaptation_layer2_1_conv2\cartoon\log.txt: Accuracy: 57.76 - Loss: 0.009178465734467978
+domain_adaptation_layer2_1_conv2\photo\log.txt: Accuracy: 88.26 - Loss: 0.0027405549638240996
+domain_adaptation_layer2_1_conv2\sketch\log.txt: Accuracy: 37.29 - Loss: 0.013143402743078608
+
+domain_adaptation_layer2_1_conv2_0_001_variation2\cartoon\log.txt: Accuracy: 15.96 - Loss: 0.033287621042834205
+domain_adaptation_layer2_1_conv2_0_001_variation2\photo\log.txt: Accuracy: 12.34 - Loss: 0.033327476724893036
+domain_adaptation_layer2_1_conv2_0_001_variation2\sketch\log.txt: Accuracy: 21.23 - Loss: 0.025059466470923244
+
+domain_adaptation_layer2_1_conv2_0_01_variation2\cartoon\log.txt: Accuracy: 11.73 - Loss: 0.02508050081266071
+domain_adaptation_layer2_1_conv2_0_01_variation2\photo\log.txt: Accuracy: 21.14 - Loss: 0.02186417579650879
+domain_adaptation_layer2_1_conv2_0_01_variation2\sketch\log.txt: Accuracy: 19.19 - Loss: 0.022683479610548944
+
+domain_adaptation_layer2_1_conv2_0_7_variation2\cartoon\log.txt: Accuracy: 24.74 - Loss: 0.021651033629939826
+domain_adaptation_layer2_1_conv2_0_7_variation2\photo\log.txt: Accuracy: 76.95 - Loss: 0.005735056316424273
+domain_adaptation_layer2_1_conv2_0_7_variation2\sketch\log.txt: Accuracy: 18.99 - Loss: 0.03147562777732098
+
+domain_adaptation_layer2_1_conv2_1_variation2\cartoon\log.txt: Accuracy: 24.87 - Loss: 0.021615257772772793
+domain_adaptation_layer2_1_conv2_1_variation2\photo\log.txt: Accuracy: 76.77 - Loss: 0.005706954038071775
+domain_adaptation_layer2_1_conv2_1_variation2\sketch\log.txt: Accuracy: 19.09 - Loss: 0.031620537265319805
+
+domain_adaptation_layer2_1_conv2_layer1_1_bn2\cartoon\log.txt: Accuracy: 49.79 - Loss: 0.011534767816599725
+domain_adaptation_layer2_1_conv2_layer1_1_bn2\photo\log.txt: Accuracy: 80.66 - Loss: 0.004478698914234866
+domain_adaptation_layer2_1_conv2_layer1_1_bn2\sketch\log.txt: Accuracy: 30.26 - Loss: 0.017160490879608373
+
+domain_adaptation_layer2_1_conv2_layer3_0_downsample_0\cartoon\log.txt: Accuracy: 56.48 - Loss: 0.009747482855317943
+domain_adaptation_layer2_1_conv2_layer3_0_downsample_0\photo\log.txt: Accuracy: 82.69 - Loss: 0.004300476253746513
+domain_adaptation_layer2_1_conv2_layer3_0_downsample_0\sketch\log.txt: Accuracy: 31.61 - Loss: 0.013993164849178152
+
+domain_adaptation_layer2_1_conv2_layer4_0_bn2\cartoon\log.txt: Accuracy: 43.52 - Loss: 0.026107336372238783
+domain_adaptation_layer2_1_conv2_layer4_0_bn2\photo\log.txt: Accuracy: 77.31 - Loss: 0.005447847972774577
+domain_adaptation_layer2_1_conv2_layer4_0_bn2\sketch\log.txt: Accuracy: 29.85 - Loss: 0.019375922085826832
+
+domain_adaptation_layer2_1_conv2_layer4_0_downsample_0\cartoon\log.txt: Accuracy: 27.82 - Loss: 0.05621571716798451
+domain_adaptation_layer2_1_conv2_layer4_0_downsample_0\photo\log.txt: Accuracy: 71.74 - Loss: 0.010184152457064218
+domain_adaptation_layer2_1_conv2_layer4_0_downsample_0\sketch\log.txt: Accuracy: 31.05 - Loss: 0.021214200100785875
+
+domain_adaptation_layer2_1_conv2_layer4_0_downsample_1\cartoon\log.txt: Accuracy: 48.93 - Loss: 0.026342658237029668
+domain_adaptation_layer2_1_conv2_layer4_0_downsample_1\photo\log.txt: Accuracy: 89.52 - Loss: 0.0034004463769584715
+domain_adaptation_layer2_1_conv2_layer4_0_downsample_1\sketch\log.txt: Accuracy: 27.03 - Loss: 0.04036376314115876
+
+domain_adaptation_layer3\cartoon\log.txt: Accuracy: 21.46 - Loss: 0.014543504718017252
+domain_adaptation_layer3\photo\log.txt: Accuracy: 57.90 - Loss: 0.00981478284219068
+domain_adaptation_layer3\sketch\log.txt: Accuracy: 30.06 - Loss: 0.013205791011236496
+
+domain_adaptation_layer3_0\cartoon\log.txt: Accuracy: 34.04 - Loss: 0.01432641992288238
+domain_adaptation_layer3_0\photo\log.txt: Accuracy: 32.10 - Loss: 0.017100997742064698
+domain_adaptation_layer3_0\sketch\log.txt: Accuracy: 28.02 - Loss: 0.016321803450007936
+
+domain_adaptation_layer3_0_bn1\cartoon\log.txt: Accuracy: 60.49 - Loss: 0.00846317615169307
+domain_adaptation_layer3_0_bn1\photo\log.txt: Accuracy: 85.99 - Loss: 0.0033973725925305646
+domain_adaptation_layer3_0_bn1\sketch\log.txt: Accuracy: 43.96 - Loss: 0.01393405061151636
+
+domain_adaptation_layer3_0_bn1_0_001_variation2\cartoon\log.txt: Accuracy: 10.11 - Loss: 0.04744774240479128
+domain_adaptation_layer3_0_bn1_0_001_variation2\photo\log.txt: Accuracy: 22.04 - Loss: 0.03453595359882195
+domain_adaptation_layer3_0_bn1_0_001_variation2\sketch\log.txt: Accuracy: 15.47 - Loss: 0.04987005483085082
+
+domain_adaptation_layer3_0_bn1_0_01_variation2\cartoon\log.txt: Accuracy: 27.65 - Loss: 0.01932834678745921
+domain_adaptation_layer3_0_bn1_0_01_variation2\photo\log.txt: Accuracy: 40.48 - Loss: 0.01373891154092229
+domain_adaptation_layer3_0_bn1_0_01_variation2\sketch\log.txt: Accuracy: 23.82 - Loss: 0.022147058712431843
+
+domain_adaptation_layer3_0_bn1_0_7_variation2\cartoon\log.txt: Accuracy: 46.67 - Loss: 0.01342720979564019
+domain_adaptation_layer3_0_bn1_0_7_variation2\photo\log.txt: Accuracy: 88.02 - Loss: 0.0030263687891071427
+domain_adaptation_layer3_0_bn1_0_7_variation2\sketch\log.txt: Accuracy: 23.19 - Loss: 0.02541934133342096
+
+domain_adaptation_layer3_0_bn1_1_variation2\cartoon\log.txt: Accuracy: 46.67 - Loss: 0.013402462132758248
+domain_adaptation_layer3_0_bn1_1_variation2\photo\log.txt: Accuracy: 88.14 - Loss: 0.002997677208866902
+domain_adaptation_layer3_0_bn1_1_variation2\sketch\log.txt: Accuracy: 23.82 - Loss: 0.025330600268772825
+
+domain_adaptation_layer3_0_bn1_layer1_1_bn2\cartoon\log.txt: Accuracy: 56.95 - Loss: 0.009763111274549579
+domain_adaptation_layer3_0_bn1_layer1_1_bn2\photo\log.txt: Accuracy: 82.87 - Loss: 0.004145330217427122
+domain_adaptation_layer3_0_bn1_layer1_1_bn2\sketch\log.txt: Accuracy: 40.42 - Loss: 0.014015086289124502
+
+domain_adaptation_layer3_0_bn1_layer2_1_conv2\cartoon\log.txt: Accuracy: 47.53 - Loss: 0.011416601643296843
+domain_adaptation_layer3_0_bn1_layer2_1_conv2\photo\log.txt: Accuracy: 61.56 - Loss: 0.009153957780963647
+domain_adaptation_layer3_0_bn1_layer2_1_conv2\sketch\log.txt: Accuracy: 31.23 - Loss: 0.015935574985090545
+
+domain_adaptation_layer3_0_bn1_layer3_0_downsample_0\cartoon\log.txt: Accuracy: 52.43 - Loss: 0.01035561154472543
+domain_adaptation_layer3_0_bn1_layer3_0_downsample_0\photo\log.txt: Accuracy: 75.03 - Loss: 0.006103783738827277
+domain_adaptation_layer3_0_bn1_layer3_0_downsample_0\sketch\log.txt: Accuracy: 17.38 - Loss: 0.017682523726203356
+
+domain_adaptation_layer3_0_bn1_layer4_0_bn2\cartoon\log.txt: Accuracy: 48.51 - Loss: 0.020314700253078962
+domain_adaptation_layer3_0_bn1_layer4_0_bn2\photo\log.txt: Accuracy: 74.25 - Loss: 0.006656815336939103
+domain_adaptation_layer3_0_bn1_layer4_0_bn2\sketch\log.txt: Accuracy: 29.17 - Loss: 0.03070874866804539
+
+domain_adaptation_layer3_0_bn1_layer4_0_downsample_0\cartoon\log.txt: Accuracy: 49.15 - Loss: 0.013536522800655901
+domain_adaptation_layer3_0_bn1_layer4_0_downsample_0\photo\log.txt: Accuracy: 86.47 - Loss: 0.0034945841142517363
+domain_adaptation_layer3_0_bn1_layer4_0_downsample_0\sketch\log.txt: Accuracy: 33.09 - Loss: 0.01949832503290145
+
+domain_adaptation_layer3_0_bn1_layer4_0_downsample_1\cartoon\log.txt: Accuracy: 56.19 - Loss: 0.016770934851350637
+domain_adaptation_layer3_0_bn1_layer4_0_downsample_1\photo\log.txt: Accuracy: 86.35 - Loss: 0.004245288651485364
+domain_adaptation_layer3_0_bn1_layer4_0_downsample_1\sketch\log.txt: Accuracy: 16.16 - Loss: 0.08046102904723888
+
+domain_adaptation_layer3_0_bn1_variation1\cartoon\log.txt: Accuracy: 24.06 - Loss: 0.018700121154964174
+domain_adaptation_layer3_0_bn1_variation1\photo\log.txt: Accuracy: 28.32 - Loss: 0.016994838407653534
+domain_adaptation_layer3_0_bn1_variation1\sketch\log.txt: Accuracy: 20.54 - Loss: 0.017757980597173935
+
+domain_adaptation_layer3_0_bn2\cartoon\log.txt: Accuracy: 35.67 - Loss: 0.014668334564734441
+domain_adaptation_layer3_0_bn2\photo\log.txt: Accuracy: 48.32 - Loss: 0.010662662126346976
+domain_adaptation_layer3_0_bn2\sketch\log.txt: Accuracy: 18.12 - Loss: 0.01881114931075013
+
+domain_adaptation_layer3_0_conv1\cartoon\log.txt: Accuracy: 23.55 - Loss: 0.017018931209023903
+domain_adaptation_layer3_0_conv1\photo\log.txt: Accuracy: 86.77 - Loss: 0.003656244557908552
+domain_adaptation_layer3_0_conv1\sketch\log.txt: Accuracy: 24.59 - Loss: 0.01736600086809752
+
+domain_adaptation_layer3_0_conv2\cartoon\log.txt: Accuracy: 34.60 - Loss: 0.013417160513559706
+domain_adaptation_layer3_0_conv2\photo\log.txt: Accuracy: 74.37 - Loss: 0.006380362681553749
+domain_adaptation_layer3_0_conv2\sketch\log.txt: Accuracy: 11.53 - Loss: 0.018881805724665603
+
+domain_adaptation_layer3_0_downsample_0\cartoon\log.txt: Accuracy: 58.02 - Loss: 0.00955161723108015
+domain_adaptation_layer3_0_downsample_0\photo\log.txt: Accuracy: 93.95 - Loss: 0.001514291577041149
+domain_adaptation_layer3_0_downsample_0\sketch\log.txt: Accuracy: 38.99 - Loss: 0.014144907405158587
+
+domain_adaptation_layer3_0_downsample_0_0_001_variation2\cartoon\log.txt: Accuracy: 18.60 - Loss: 0.020729768347414686
+domain_adaptation_layer3_0_downsample_0_0_001_variation2\photo\log.txt: Accuracy: 21.20 - Loss: 0.017367427077835906
+domain_adaptation_layer3_0_downsample_0_0_001_variation2\sketch\log.txt: Accuracy: 19.73 - Loss: 0.019413776693831996
+
+domain_adaptation_layer3_0_downsample_0_0_01_variation2\cartoon\log.txt: Accuracy: 37.20 - Loss: 0.01431078072192319
+domain_adaptation_layer3_0_downsample_0_0_01_variation2\photo\log.txt: Accuracy: 74.25 - Loss: 0.006212957140928257
+domain_adaptation_layer3_0_downsample_0_0_01_variation2\sketch\log.txt: Accuracy: 30.19 - Loss: 0.014150813749104124
+
+domain_adaptation_layer3_0_downsample_0_0_7_variation2\cartoon\log.txt: Accuracy: 49.06 - Loss: 0.011433904240410075
+domain_adaptation_layer3_0_downsample_0_0_7_variation2\photo\log.txt: Accuracy: 93.17 - Loss: 0.0018821723664369054
+domain_adaptation_layer3_0_downsample_0_0_7_variation2\sketch\log.txt: Accuracy: 30.11 - Loss: 0.01497634219043156
+
+domain_adaptation_layer3_0_downsample_0_1_variation2\cartoon\log.txt: Accuracy: 48.98 - Loss: 0.011452983683388387
+domain_adaptation_layer3_0_downsample_0_1_variation2\photo\log.txt: Accuracy: 93.23 - Loss: 0.001836305897972898
+domain_adaptation_layer3_0_downsample_0_1_variation2\sketch\log.txt: Accuracy: 30.41 - Loss: 0.014796840777437205
+
+domain_adaptation_layer3_0_downsample_0_variation1\cartoon\log.txt: Accuracy: 20.95 - Loss: 0.02040004445424259
+domain_adaptation_layer3_0_downsample_0_variation1\photo\log.txt: Accuracy: 25.51 - Loss: 0.01794951326118972
+domain_adaptation_layer3_0_downsample_0_variation1\sketch\log.txt: Accuracy: 22.47 - Loss: 0.016374358392969347
+
+domain_adaptation_layer3_0_downsample_1\cartoon\log.txt: Accuracy: 17.28 - Loss: 0.018627548583945316
+domain_adaptation_layer3_0_downsample_1\photo\log.txt: Accuracy: 14.97 - Loss: 0.019097413131576813
+domain_adaptation_layer3_0_downsample_1\sketch\log.txt: Accuracy: 10.84 - Loss: 0.018033749640336865
+
+domain_adaptation_layer3_1\cartoon\log.txt: Accuracy: 21.46 - Loss: 0.014543531418050109
+domain_adaptation_layer3_1\photo\log.txt: Accuracy: 57.72 - Loss: 0.009803028877623781
+domain_adaptation_layer3_1\sketch\log.txt: Accuracy: 30.29 - Loss: 0.013195051828939272
+
+domain_adaptation_layer3_1_bn1\cartoon\log.txt: Accuracy: 53.97 - Loss: 0.010841027900271449
+domain_adaptation_layer3_1_bn1\photo\log.txt: Accuracy: 92.87 - Loss: 0.002051810774684488
+domain_adaptation_layer3_1_bn1\sketch\log.txt: Accuracy: 29.83 - Loss: 0.016572974844117235
+
+domain_adaptation_layer3_1_bn2\cartoon\log.txt: Accuracy: 46.12 - Loss: 0.01060730255758803
+domain_adaptation_layer3_1_bn2\photo\log.txt: Accuracy: 78.92 - Loss: 0.00499651867472483
+domain_adaptation_layer3_1_bn2\sketch\log.txt: Accuracy: 27.28 - Loss: 0.01583505398931622
+
+domain_adaptation_layer3_1_conv1\cartoon\log.txt: Accuracy: 17.70 - Loss: 0.018118434239166183
+domain_adaptation_layer3_1_conv1\photo\log.txt: Accuracy: 27.90 - Loss: 0.01782677314595548
+domain_adaptation_layer3_1_conv1\sketch\log.txt: Accuracy: 17.69 - Loss: 0.021404296394886026
+
+domain_adaptation_layer3_1_conv2\cartoon\log.txt: Accuracy: 51.41 - Loss: 0.011896754135043954
+domain_adaptation_layer3_1_conv2\photo\log.txt: Accuracy: 86.05 - Loss: 0.00299965444071118
+domain_adaptation_layer3_1_conv2\sketch\log.txt: Accuracy: 32.48 - Loss: 0.016436134867766457
+
+domain_adaptation_layer4\cartoon\log.txt: Accuracy: 41.30 - Loss: 0.012867495341309102
+domain_adaptation_layer4\photo\log.txt: Accuracy: 73.35 - Loss: 0.006775743210922458
+domain_adaptation_layer4\sketch\log.txt: Accuracy: 14.15 - Loss: 0.017633249632849225
+
+domain_adaptation_layer4_0_bn1\cartoon\log.txt: Accuracy: 48.93 - Loss: 0.015986343419795965
+domain_adaptation_layer4_0_bn1\photo\log.txt: Accuracy: 90.12 - Loss: 0.0020104449584279877
+domain_adaptation_layer4_0_bn1\sketch\log.txt: Accuracy: 39.14 - Loss: 0.01395466962398297
+
+domain_adaptation_layer4_0_bn2\cartoon\log.txt: Accuracy: 54.35 - Loss: 0.015064603944687307
+domain_adaptation_layer4_0_bn2\photo\log.txt: Accuracy: 92.40 - Loss: 0.0017937326301893073
+domain_adaptation_layer4_0_bn2\sketch\log.txt: Accuracy: 22.27 - Loss: 0.03641461517655173
+
+domain_adaptation_layer4_0_conv2\cartoon\log.txt: Accuracy: 29.39 - Loss: 0.031788392543137936
+domain_adaptation_layer4_0_conv2\photo\log.txt: Accuracy: 44.07 - Loss: 0.03900892233063361
+domain_adaptation_layer4_0_conv2\sketch\log.txt: Accuracy: 5.50 - Loss: 0.02740045915459458
+
+domain_adaptation_layer4_0_downsample_0\cartoon\log.txt: Accuracy: 31.27 - Loss: 0.06131867662631611
+domain_adaptation_layer4_0_downsample_0\photo\log.txt: Accuracy: 71.62 - Loss: 0.01343197498378528
+domain_adaptation_layer4_0_downsample_0\sketch\log.txt: Accuracy: 28.18 - Loss: 0.03006093067108265
+
+domain_adaptation_layer4_0_downsample_1\cartoon\log.txt: Accuracy: 52.47 - Loss: 0.023076661841772216
+domain_adaptation_layer4_0_downsample_1\photo\log.txt: Accuracy: 94.61 - Loss: 0.0014395051747337429
+domain_adaptation_layer4_0_downsample_1\sketch\log.txt: Accuracy: 44.64 - Loss: 0.027278872756261383
+
+domain_adaptation_layer4_0_downsample_1_0_001_variation2\cartoon\log.txt: Accuracy: 51.32 - Loss: 0.014278262983944025
+domain_adaptation_layer4_0_downsample_1_0_001_variation2\photo\log.txt: Accuracy: 96.05 - Loss: 0.0009747344974015734
+domain_adaptation_layer4_0_downsample_1_0_001_variation2\sketch\log.txt: Accuracy: 36.47 - Loss: 0.023107254738782192
+
+domain_adaptation_layer4_0_downsample_1_0_01_variation2\cartoon\log.txt: Accuracy: 51.41 - Loss: 0.014432318089053086
+domain_adaptation_layer4_0_downsample_1_0_01_variation2\photo\log.txt: Accuracy: 95.93 - Loss: 0.0009797244824881772
+domain_adaptation_layer4_0_downsample_1_0_01_variation2\sketch\log.txt: Accuracy: 37.21 - Loss: 0.023228311286867045
+
+domain_adaptation_layer4_0_downsample_1_0_7_variation2\cartoon\log.txt: Accuracy: 50.55 - Loss: 0.015160555113742681
+domain_adaptation_layer4_0_downsample_1_0_7_variation2\photo\log.txt: Accuracy: 95.81 - Loss: 0.0010198638892961209
+domain_adaptation_layer4_0_downsample_1_0_7_variation2\sketch\log.txt: Accuracy: 38.71 - Loss: 0.023566378110327104
+
+domain_adaptation_layer4_0_downsample_1_1_variation2\cartoon\log.txt: Accuracy: 50.81 - Loss: 0.015163779751407204
+domain_adaptation_layer4_0_downsample_1_1_variation2\photo\log.txt: Accuracy: 95.81 - Loss: 0.001021392406020202
+domain_adaptation_layer4_0_downsample_1_1_variation2\sketch\log.txt: Accuracy: 38.84 - Loss: 0.023478766431575454
+
+domain_adaptation_layer4_0_downsample_1_layer1_1_bn2_layer3_0_bn1\cartoon\log.txt: Accuracy: 53.63 - Loss: 0.020903476650600956
+domain_adaptation_layer4_0_downsample_1_layer1_1_bn2_layer3_0_bn1\photo\log.txt: Accuracy: 76.95 - Loss: 0.008409067087745416
+domain_adaptation_layer4_0_downsample_1_layer1_1_bn2_layer3_0_bn1\sketch\log.txt: Accuracy: 21.35 - Loss: 0.04877993315941855
+
+domain_adaptation_layer4_0_downsample_1_variation1\cartoon\log.txt: Accuracy: 50.38 - Loss: 0.015141187407356073
+domain_adaptation_layer4_0_downsample_1_variation1\photo\log.txt: Accuracy: 95.99 - Loss: 0.0009753489932379948
+domain_adaptation_layer4_0_downsample_1_variation1\sketch\log.txt: Accuracy: 38.71 - Loss: 0.022805350746596304
+
+domain_adaptation_layer4_1_bn1\cartoon\log.txt: Accuracy: 19.67 - Loss: 0.0206669660908116
+domain_adaptation_layer4_1_bn1\photo\log.txt: Accuracy: 34.01 - Loss: 0.026357710789777562
+domain_adaptation_layer4_1_bn1\sketch\log.txt: Accuracy: 20.39 - Loss: 0.021559709202821516
+
+domain_adaptation_layer4_1_bn2\cartoon\log.txt: Accuracy: 43.56 - Loss: 0.012561159138488282
+domain_adaptation_layer4_1_bn2\photo\log.txt: Accuracy: 72.87 - Loss: 0.006743142304350873
+domain_adaptation_layer4_1_bn2\sketch\log.txt: Accuracy: 19.29 - Loss: 0.02009030182144969
+
+domain_adaptation_layer4_1_conv2\cartoon\log.txt: Accuracy: 44.80 - Loss: 0.013378403394295494
+domain_adaptation_layer4_1_conv2\photo\log.txt: Accuracy: 60.18 - Loss: 0.010076533534569655
+domain_adaptation_layer4_1_conv2\sketch\log.txt: Accuracy: 16.85 - Loss: 0.015444604578015761
+
+random_DA_layer1_1_bn2_0_001_variation2_0_1\cartoon\log.txt: Accuracy: 18.39 - Loss: 0.021078738539698993
+random_DA_layer1_1_bn2_0_001_variation2_0_1\photo\log.txt: Accuracy: 21.32 - Loss: 0.019942537788859384
+random_DA_layer1_1_bn2_0_001_variation2_0_1\sketch\log.txt: Accuracy: 19.65 - Loss: 0.019622998857777307
+
+random_DA_layer1_1_bn2_0_01_variation2_0_1\cartoon\log.txt: Accuracy: 26.24 - Loss: 0.017469357610155698
+random_DA_layer1_1_bn2_0_01_variation2_0_1\photo\log.txt: Accuracy: 46.35 - Loss: 0.01094961694614616
+random_DA_layer1_1_bn2_0_01_variation2_0_1\sketch\log.txt: Accuracy: 24.92 - Loss: 0.01716651319395528
+
+random_DA_layer1_1_bn2_0_1\cartoon\log.txt: Accuracy: 48.63 - Loss: 0.012552459040853758
+random_DA_layer1_1_bn2_0_1\photo\log.txt: Accuracy: 88.56 - Loss: 0.0030386026664274536
+random_DA_layer1_1_bn2_0_1\sketch\log.txt: Accuracy: 29.24 - Loss: 0.01957904577604169
+
+random_DA_layer1_1_bn2_0_5\cartoon\log.txt: Accuracy: 53.67 - Loss: 0.011117170844544933
+random_DA_layer1_1_bn2_0_5\photo\log.txt: Accuracy: 95.33 - Loss: 0.0013018757149487912
+random_DA_layer1_1_bn2_0_5\sketch\log.txt: Accuracy: 31.61 - Loss: 0.02094424841558093
+
+random_DA_layer1_1_bn2_0_7_variation2_0_1\cartoon\log.txt: Accuracy: 41.72 - Loss: 0.013334783843047789
+random_DA_layer1_1_bn2_0_7_variation2_0_1\photo\log.txt: Accuracy: 92.34 - Loss: 0.002244133289211881
+random_DA_layer1_1_bn2_0_7_variation2_0_1\sketch\log.txt: Accuracy: 28.61 - Loss: 0.014488053582769885
+
+random_DA_layer1_1_bn2_0_9\cartoon\log.txt: Accuracy: 50.26 - Loss: 0.011767724996159305
+random_DA_layer1_1_bn2_0_9\photo\log.txt: Accuracy: 93.41 - Loss: 0.0019406054057403953
+random_DA_layer1_1_bn2_0_9\sketch\log.txt: Accuracy: 30.69 - Loss: 0.020295444112692997
+
+random_DA_layer1_1_bn2_1_variation2_0_1\cartoon\log.txt: Accuracy: 41.85 - Loss: 0.013314613252369618
+random_DA_layer1_1_bn2_1_variation2_0_1\photo\log.txt: Accuracy: 92.16 - Loss: 0.002241194438925403
+random_DA_layer1_1_bn2_1_variation2_0_1\sketch\log.txt: Accuracy: 28.66 - Loss: 0.014486069532410429
+
+random_DA_layer2_1_bn2_0_001_variation2_0_1\cartoon\log.txt: Accuracy: 18.34 - Loss: 0.02106615402592734
+random_DA_layer2_1_bn2_0_001_variation2_0_1\photo\log.txt: Accuracy: 21.80 - Loss: 0.01991809949189603
+random_DA_layer2_1_bn2_0_001_variation2_0_1\sketch\log.txt: Accuracy: 19.65 - Loss: 0.01953572624965793
+
+random_DA_layer2_1_bn2_0_01_variation2_0_1\cartoon\log.txt: Accuracy: 26.24 - Loss: 0.01743928910115473
+random_DA_layer2_1_bn2_0_01_variation2_0_1\photo\log.txt: Accuracy: 46.41 - Loss: 0.01097002079386911
+random_DA_layer2_1_bn2_0_01_variation2_0_1\sketch\log.txt: Accuracy: 24.43 - Loss: 0.017061864974754218
+
+random_DA_layer2_1_bn2_0_1\cartoon\log.txt: Accuracy: 38.05 - Loss: 0.015070844066580408
+random_DA_layer2_1_bn2_0_1\photo\log.txt: Accuracy: 92.63 - Loss: 0.0016585963036485774
+random_DA_layer2_1_bn2_0_1\sketch\log.txt: Accuracy: 31.18 - Loss: 0.016606178750030624
+
+random_DA_layer2_1_bn2_0_5\cartoon\log.txt: Accuracy: 49.83 - Loss: 0.012800362317126765
+random_DA_layer2_1_bn2_0_5\photo\log.txt: Accuracy: 86.83 - Loss: 0.0028433622588810627
+random_DA_layer2_1_bn2_0_5\sketch\log.txt: Accuracy: 31.59 - Loss: 0.021045298150369124
+
+random_DA_layer2_1_bn2_0_7_variation2_0_1\cartoon\log.txt: Accuracy: 41.72 - Loss: 0.013330854259355077
+random_DA_layer2_1_bn2_0_7_variation2_0_1\photo\log.txt: Accuracy: 92.34 - Loss: 0.0022469811453790724
+random_DA_layer2_1_bn2_0_7_variation2_0_1\sketch\log.txt: Accuracy: 28.86 - Loss: 0.014477812931354975
+
+random_DA_layer2_1_bn2_0_9\cartoon\log.txt: Accuracy: 48.51 - Loss: 0.013492538876602674
+random_DA_layer2_1_bn2_0_9\photo\log.txt: Accuracy: 63.89 - Loss: 0.008821341980940211
+random_DA_layer2_1_bn2_0_9\sketch\log.txt: Accuracy: 24.36 - Loss: 0.020975074541420086
+
+random_DA_layer2_1_bn2_1_variation2_0_1\cartoon\log.txt: Accuracy: 41.68 - Loss: 0.013359126542717117
+random_DA_layer2_1_bn2_1_variation2_0_1\photo\log.txt: Accuracy: 92.34 - Loss: 0.0022390981132309595
+random_DA_layer2_1_bn2_1_variation2_0_1\sketch\log.txt: Accuracy: 28.71 - Loss: 0.014546370621581938
+
+random_DA_layer2_1_conv2_0_001_variation2_0_1\cartoon\log.txt: Accuracy: 18.34 - Loss: 0.021140364453247382
+random_DA_layer2_1_conv2_0_001_variation2_0_1\photo\log.txt: Accuracy: 21.80 - Loss: 0.019911688708973502
+random_DA_layer2_1_conv2_0_001_variation2_0_1\sketch\log.txt: Accuracy: 19.65 - Loss: 0.01937264709200802
+
+random_DA_layer2_1_conv2_0_01_variation2_0_1\cartoon\log.txt: Accuracy: 26.28 - Loss: 0.01752556123017451
+random_DA_layer2_1_conv2_0_01_variation2_0_1\photo\log.txt: Accuracy: 46.11 - Loss: 0.010985737789176895
+random_DA_layer2_1_conv2_0_01_variation2_0_1\sketch\log.txt: Accuracy: 25.15 - Loss: 0.017129042822764284
+
+random_DA_layer2_1_conv2_0_1\cartoon\log.txt: Accuracy: 44.92 - Loss: 0.01197466842906467
+random_DA_layer2_1_conv2_0_1\photo\log.txt: Accuracy: 91.32 - Loss: 0.0019036126021898078
+random_DA_layer2_1_conv2_0_1\sketch\log.txt: Accuracy: 36.04 - Loss: 0.012817820343057385
+
+random_DA_layer2_1_conv2_0_5\cartoon\log.txt: Accuracy: 59.22 - Loss: 0.008825840142399784
+random_DA_layer2_1_conv2_0_5\photo\log.txt: Accuracy: 88.44 - Loss: 0.002825271577468354
+random_DA_layer2_1_conv2_0_5\sketch\log.txt: Accuracy: 49.33 - Loss: 0.011275345646840497
+
+random_DA_layer2_1_conv2_0_7_variation2_0_1\cartoon\log.txt: Accuracy: 41.72 - Loss: 0.013323733475021127
+random_DA_layer2_1_conv2_0_7_variation2_0_1\photo\log.txt: Accuracy: 92.34 - Loss: 0.002241230409168555
+random_DA_layer2_1_conv2_0_7_variation2_0_1\sketch\log.txt: Accuracy: 28.81 - Loss: 0.01444900906641206
+
+random_DA_layer2_1_conv2_0_9\cartoon\log.txt: Accuracy: 58.75 - Loss: 0.009219251356942662
+random_DA_layer2_1_conv2_0_9\photo\log.txt: Accuracy: 80.78 - Loss: 0.004497317005573454
+random_DA_layer2_1_conv2_0_9\sketch\log.txt: Accuracy: 53.68 - Loss: 0.010024948660488133
+
+random_DA_layer2_1_conv2_1_variation2_0_1\cartoon\log.txt: Accuracy: 41.68 - Loss: 0.013358242619057971
+random_DA_layer2_1_conv2_1_variation2_0_1\photo\log.txt: Accuracy: 92.22 - Loss: 0.0022429315540604964
+random_DA_layer2_1_conv2_1_variation2_0_1\sketch\log.txt: Accuracy: 28.61 - Loss: 0.014495964783328458
+
+random_DA_layer3_0_bn1_0_001_variation2_0_1\cartoon\log.txt: Accuracy: 18.39 - Loss: 0.021067906056654737
+random_DA_layer3_0_bn1_0_001_variation2_0_1\photo\log.txt: Accuracy: 21.80 - Loss: 0.019891545836797017
+random_DA_layer3_0_bn1_0_001_variation2_0_1\sketch\log.txt: Accuracy: 19.65 - Loss: 0.01961128582448321
+
+random_DA_layer3_0_bn1_0_01_variation2_0_1\cartoon\log.txt: Accuracy: 26.11 - Loss: 0.017554535800686468
+random_DA_layer3_0_bn1_0_01_variation2_0_1\photo\log.txt: Accuracy: 46.41 - Loss: 0.0109436343173067
+random_DA_layer3_0_bn1_0_01_variation2_0_1\sketch\log.txt: Accuracy: 25.22 - Loss: 0.017050952333686732
+
+random_DA_layer3_0_bn1_0_1\cartoon\log.txt: Accuracy: 41.64 - Loss: 0.013937968264871084
+random_DA_layer3_0_bn1_0_1\photo\log.txt: Accuracy: 83.53 - Loss: 0.004673896337340692
+random_DA_layer3_0_bn1_0_1\sketch\log.txt: Accuracy: 32.32 - Loss: 0.013167934370392848
+
+random_DA_layer3_0_bn1_0_5\cartoon\log.txt: Accuracy: 53.20 - Loss: 0.010509130351067403
+random_DA_layer3_0_bn1_0_5\photo\log.txt: Accuracy: 91.80 - Loss: 0.0019436656592224173
+random_DA_layer3_0_bn1_0_5\sketch\log.txt: Accuracy: 40.77 - Loss: 0.013253282987910635
+
+random_DA_layer3_0_bn1_0_7_variation2_0_1\cartoon\log.txt: Accuracy: 41.77 - Loss: 0.013363734383530177
+random_DA_layer3_0_bn1_0_7_variation2_0_1\photo\log.txt: Accuracy: 92.28 - Loss: 0.0022453699182875143
+random_DA_layer3_0_bn1_0_7_variation2_0_1\sketch\log.txt: Accuracy: 28.71 - Loss: 0.014525568979816238
+
+random_DA_layer3_0_bn1_0_9\cartoon\log.txt: Accuracy: 34.68 - Loss: 0.014904705330780341
+random_DA_layer3_0_bn1_0_9\photo\log.txt: Accuracy: 42.16 - Loss: 0.013615699822897325
+random_DA_layer3_0_bn1_0_9\sketch\log.txt: Accuracy: 27.39 - Loss: 0.01559873354225615
+
+random_DA_layer3_0_bn1_1_variation2_0_1\cartoon\log.txt: Accuracy: 41.77 - Loss: 0.013332147430946396
+random_DA_layer3_0_bn1_1_variation2_0_1\photo\log.txt: Accuracy: 92.28 - Loss: 0.0022405788536646407
+random_DA_layer3_0_bn1_1_variation2_0_1\sketch\log.txt: Accuracy: 28.84 - Loss: 0.014500270820689522
+
+random_DA_layer3_0_downsample_0_0_001_variation2_0_1\cartoon\log.txt: Accuracy: 18.30 - Loss: 0.021087548024825268
+random_DA_layer3_0_downsample_0_0_001_variation2_0_1\photo\log.txt: Accuracy: 21.32 - Loss: 0.01996656806169156
+random_DA_layer3_0_downsample_0_0_001_variation2_0_1\sketch\log.txt: Accuracy: 19.65 - Loss: 0.019655322688746677
+
+random_DA_layer3_0_downsample_0_0_01_variation2_0_1\cartoon\log.txt: Accuracy: 26.41 - Loss: 0.017478550253467756
+random_DA_layer3_0_downsample_0_0_01_variation2_0_1\photo\log.txt: Accuracy: 45.99 - Loss: 0.010960652942429046
+random_DA_layer3_0_downsample_0_0_01_variation2_0_1\sketch\log.txt: Accuracy: 25.10 - Loss: 0.017084371712894106
+
+random_DA_layer3_0_downsample_0_0_1\cartoon\log.txt: Accuracy: 57.12 - Loss: 0.010002766058815218
+random_DA_layer3_0_downsample_0_0_1\photo\log.txt: Accuracy: 94.91 - Loss: 0.0011982809272622634
+random_DA_layer3_0_downsample_0_0_1\sketch\log.txt: Accuracy: 42.35 - Loss: 0.014404078534493528
+
+random_DA_layer3_0_downsample_0_0_5\cartoon\log.txt: Accuracy: 59.56 - Loss: 0.009282743380287402
+random_DA_layer3_0_downsample_0_0_5\photo\log.txt: Accuracy: 94.19 - Loss: 0.0014066489011852327
+random_DA_layer3_0_downsample_0_0_5\sketch\log.txt: Accuracy: 44.03 - Loss: 0.013824044338283601
+
+random_DA_layer3_0_downsample_0_0_9\cartoon\log.txt: Accuracy: 60.28 - Loss: 0.008957991497305065
+random_DA_layer3_0_downsample_0_0_9\photo\log.txt: Accuracy: 92.69 - Loss: 0.0017620522383890466
+random_DA_layer3_0_downsample_0_0_9\sketch\log.txt: Accuracy: 44.08 - Loss: 0.013615404347421924
+
+random_DA_layer4_0_conv1_0_1\cartoon\log.txt: Accuracy: 50.94 - Loss: 0.013897704551752923
+random_DA_layer4_0_conv1_0_1\photo\log.txt: Accuracy: 93.53 - Loss: 0.0015725948154915147
+random_DA_layer4_0_conv1_0_1\sketch\log.txt: Accuracy: 29.68 - Loss: 0.023489591854011234
+
+random_DA_layer4_0_conv1_0_5\cartoon\log.txt: Accuracy: 48.93 - Loss: 0.010724175072977567
+random_DA_layer4_0_conv1_0_5\photo\log.txt: Accuracy: 80.66 - Loss: 0.004303571671069025
+random_DA_layer4_0_conv1_0_5\sketch\log.txt: Accuracy: 28.30 - Loss: 0.013818598485351004
+
+random_DA_layer4_0_conv1_0_9\cartoon\log.txt: Accuracy: 27.39 - Loss: 0.014629217951777853
+random_DA_layer4_0_conv1_0_9\photo\log.txt: Accuracy: 58.62 - Loss: 0.00947714124967952
+random_DA_layer4_0_conv1_0_9\sketch\log.txt: Accuracy: 21.68 - Loss: 0.016120428406697675
+
+random_DA_layer4_0_downsample_1_0_1\cartoon\log.txt: Accuracy: 49.66 - Loss: 0.01693288271185074
+random_DA_layer4_0_downsample_1_0_1\photo\log.txt: Accuracy: 95.39 - Loss: 0.0011476072644491396
+random_DA_layer4_0_downsample_1_0_1\sketch\log.txt: Accuracy: 36.75 - Loss: 0.027945785098902352
+
+random_DA_layer4_0_downsample_1_0_5\cartoon\log.txt: Accuracy: 48.38 - Loss: 0.02132136969105579
+random_DA_layer4_0_downsample_1_0_5\photo\log.txt: Accuracy: 90.12 - Loss: 0.0027783500448895428
+random_DA_layer4_0_downsample_1_0_5\sketch\log.txt: Accuracy: 32.07 - Loss: 0.03982763978650049
+
+random_DA_layer4_0_downsample_1_0_9\cartoon\log.txt: Accuracy: 42.53 - Loss: 0.027619460098597986
+random_DA_layer4_0_downsample_1_0_9\photo\log.txt: Accuracy: 79.22 - Loss: 0.007541856087164251
+random_DA_layer4_0_downsample_1_0_9\sketch\log.txt: Accuracy: 24.99 - Loss: 0.0485504124077503
+
+random_DA_layer4_1_conv1_0_1\cartoon\log.txt: Accuracy: 49.62 - Loss: 0.01076614916477187
+random_DA_layer4_1_conv1_0_1\photo\log.txt: Accuracy: 89.28 - Loss: 0.0031884150512650343
+random_DA_layer4_1_conv1_0_1\sketch\log.txt: Accuracy: 33.65 - Loss: 0.014353394933134037
+
+random_DA_layer4_1_conv1_0_5\cartoon\log.txt: Accuracy: 40.74 - Loss: 0.012219207736412413
+random_DA_layer4_1_conv1_0_5\photo\log.txt: Accuracy: 82.93 - Loss: 0.006720865343859096
+random_DA_layer4_1_conv1_0_5\sketch\log.txt: Accuracy: 7.05 - Loss: 0.016004618993998482
+
+random_DA_layer4_1_conv1_0_9\cartoon\log.txt: Accuracy: 22.65 - Loss: 0.014115640480363735
+random_DA_layer4_1_conv1_0_9\photo\log.txt: Accuracy: 53.83 - Loss: 0.009800387785106363
+random_DA_layer4_1_conv1_0_9\sketch\log.txt: Accuracy: 2.14 - Loss: 0.017191764810182995
+
+
+cartoon: (60.49, 'domain_adaptation_layer3_0_bn1')
+photo: (96.05, 'domain_adaptation_layer4_0_downsample_1_0_001_variation2')
+sketch: (53.68, 'random_DA_layer2_1_conv2_0_9')
+
+baseline: 63.59
+domain_adaptation_layer1_1_bn2_layer3_0_bn1: 60.37
+domain_adaptation_layer2_1_bn1: 61.34
+domain_adaptation_layer2_1_conv2: 61.10
+domain_adaptation_layer3_0_bn1: 63.48
+domain_adaptation_layer3_0_bn1_layer1_1_bn2: 60.08
+domain_adaptation_layer3_0_downsample_0: 63.65
+domain_adaptation_layer4_0_downsample_1: 63.91
+domain_adaptation_layer4_0_downsample_1_0_001_variation2: 61.28
+domain_adaptation_layer4_0_downsample_1_0_01_variation2: 61.52
+domain_adaptation_layer4_0_downsample_1_0_7_variation2: 61.69
+domain_adaptation_layer4_0_downsample_1_1_variation2: 61.82
+domain_adaptation_layer4_0_downsample_1_variation1: 61.69
+random_DA_layer1_1_bn2_0_5: 60.20
+random_DA_layer2_1_conv2_0_5: 65.66
+random_DA_layer2_1_conv2_0_9: 64.40
+random_DA_layer3_0_bn1_0_5: 61.92
+random_DA_layer3_0_downsample_0_0_1: 64.79
+random_DA_layer3_0_downsample_0_0_5: 65.93
+random_DA_layer3_0_downsample_0_0_9: 65.68
+random_DA_layer4_0_downsample_1_0_1: 60.60

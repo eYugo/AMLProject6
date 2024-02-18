@@ -118,11 +118,12 @@ def main(args):
     # Load model
     if CONFIG.experiment in ['baseline']:
         model = BaseResNet18()
-    else:
+    elif CONFIG.experiment in ['random_DA', 'domain_adaptation']:
         model = ASHResNet18(layer_list=args.layer_list, topK=args.topK)
+    else:
+        raise ValueError("Invalid experiment name")
     
     model.to(CONFIG.device)
-    #model.extension = 2
     model.extension = args.extension
 
     if not CONFIG.test_only:
