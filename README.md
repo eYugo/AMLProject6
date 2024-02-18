@@ -85,6 +85,7 @@ In the following, you can find a brief description of the relevant command line 
 | `--seed` | the integer used to seed all the experiments, to make results as reproducible as possible. *Do not change it*, it defaults to 0. |
 | `--layer_list` | a string that contains the layer list of where to attach the forward hook. |
 | `--extension` | a number that sets which type of ASM to compute, the default value is 0, value supported are 0, 1, 2; 1 for extension 1 and 2 for extension 2. |
+| `--topK` | a number that sets the topK value for the ASM computation. |
 
 ## Baseline Results (see point 0. of the project)
 |          | Art Painting &#8594; Cartoon | Art Painting &#8594; Sketch | Art Painting &#8594; Photo | Average |
